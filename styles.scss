@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+@mixin buttonStyle {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0 10px;
+}
+.topBar {
+  height: 8vh;
+  border-bottom: 2px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  img {
+    width: 20px;
+    height: 12px;
+  }
+  .country {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+  }
+  i {
+    font-size: 9px;
+  }
+  .searchBar {
+    input {
+      height: 3vh;
+      border-radius: 150px;
+      width: 30vw;
+      padding: 0.9vh;
+      border: 2px solid #eee;
+      font-size: 15px;
+    }
+    button {
+      @include buttonStyle();
+      position: relative;
+      left: -4.5vh;
+      i {
+        font-size: 15px;
+      }
+    }
+  }
+  .userCart {
+    .cart {
+      border-right: 1px solid #ddd;
+    }
+    button {
+      @include buttonStyle();
+      i {
+        font-size: 15px;
+      }
+      font-size: 15px;
+    }
+  }
+}
+header {
+  position: sticky;
+  top: 0;
+  font-weight: 550;
+  font-size: 12px;
+  background-color: white;
+  z-index: 150;
+
+  .nav {
+    position: sticky;
+    top: 0;
+    height: 8vh;
+    margin: auto;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .box1 {
+      display: flex;
+      align-items: center;
+      gap: 2em;
+      .logo {
+        img {
+          width: 13em;
+        }
+      }
+      .category {
+        button {
+          @include buttonStyle();
+          background-color: #eeeeef;
+          height: 4vh;
+          width: 8em;
+          font-weight: 600;
+          border-radius: 150px;
+        }
+      }
+    }
+  }
+  .navs {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 2em;
+      font-size: 15px;
+      font-weight: 500;
+      li i {
+        font-size: 8px;
+        position: relative;
+      }
+    }
+    li {
+      padding: 3vh 0;
+      .links {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        z-index: 1;
+      }
+    }
+    li:hover {
+      i {
+        transform: rotate(180deg);
+        transition: all 0.4s;
+        // animation: rotater 5s infinite  ;
+      }
+      .links,
+      .links:hover {
+        margin-top: 2.5vh;
+        display: block;
+        width: 1em;
+        border-radius: 0 0 10px 10px;
+        padding: 15px 10px;
+        background-color: white;
+
+        a {
+          color: black;
+          border-radius: 5px;
+          font-weight: normal;
+          font-size: 10px;
+          padding: 6px 25px;
+          text-decoration: none;
+          display: block;
+          &:hover {
+            background-color: #f7f6f6;
+          }
+        }
+      }
+    }
+  }
+  .join {
+    button {
+      @include buttonStyle();
+      background: rgb(47, 87, 239);
+      font-weight: 600;
+      color: white;
+      height: 4.5vh;
+      border-radius: 10px;
+      width: 6vw;
+      background: linear-gradient(
+        90deg,
+        rgba(47, 87, 239, 1) 11%,
+        rgba(185, 102, 231, 1) 65%
+      );
+    }
+  }
+}
+.homePage {
+  height: 70vh;
+  .textBox {
+    position: relative;
+    color: white;
+    z-index: 40;
+    left: 16vw;
+    top: -55vh;
+    width: 25vw;
+    h2 {
+      font-size: 3.1em;
+      line-height: 1.3em;
+    }
+    p {
+      font-size: 23px;
+      color: #ddd;
+      margin-top: 2.5vh;
+      width: 85%;
+    }
+    .actions {
+      margin-top: 3.5vh;
+      button {
+        @include buttonStyle();
+        color: white;
+        width: 40%;
+        height: 5.5vh;
+        font-size: 15px;
+        border-radius: 100px;
+        padding: 10px;
+        border: white 2px solid;
+        margin-right: 2em;
+        font-weight: 400;
+        i {
+          display: none;
+        }
+        &:hover {
+          i {
+            display: inline;
+            animation: myanim 3s infinite ease-in-out;
+          }
+          background-color: #2f57ef;
+          transition: 1s;
+          border: #2f57ef 2px solid;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+        font-weight: 500;
+        &:hover {
+          text-decoration: underline;
+          text-underline-offset: 5px;
+          text-decoration-thickness: 2px;
+        }
+        i {
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes myanim {
+  15% {
+    margin-left: 10px;
+  }
+  100% {
+    margin-left: 10px;
+  }
+}
+@keyframes underline {
+  0% {
+  }
+}
+@keyframes rotater {
+  1% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.courses {
+  margin: 10vh auto;
+  width: 70%;
+  display: grid;
+  gap: 2em;
+  color: white;
+  place-content: center;
+  grid-template-columns: repeat(4, 17em);
+  .box {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("https://rainbowit.net/html/histudy/assets/images/gallery/gallery-thumb-01.jpg");
+    background-position: 50%;
+    background-size: cover;
+    height: 8vh;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid black;
+    line-height: 20px;
+    font-size: 15px;
+    flex-direction: column;
+    span {
+      display: none;
+      transform: translateY(40px);
+      i {
+        font-size: 12px;
+      }
+    }
+
+    &:hover {
+      span {
+        display: block;
+        color: #ddd;
+        transform: translateY(0px);
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          background-color: #ffffff;
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out;
+        }
+        &:hover {
+          color: white;
+          &::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+        }
+      }
+    }
+  }
+}
+.feedback {
+  width: 100%;
+  height: 50vh;
+  margin: auto;
+  text-align: center;
+  .head {
+    width: 35%;
+    margin: auto;
+  }
+}
