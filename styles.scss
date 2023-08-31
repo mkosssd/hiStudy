@@ -191,10 +191,10 @@ header {
     color: white;
     z-index: 40;
     left: 16vw;
-    top: -35em;
+    top: -33em;
     width: 25vw;
     h2 {
-      font-size: 3.1em;
+      font-size: 3em;
       line-height: 1.3em;
     }
     p {
@@ -209,7 +209,7 @@ header {
         @include buttonStyle();
         color: white;
         width: 40%;
-        height: 5.5vh;
+        height: 4em;
         font-size: 1em;
         border-radius: 100px;
         padding: 10px;
@@ -347,12 +347,15 @@ header {
 }
 .feedback {
   width: 100%;
-  height: 50vh;
+  height: 55vh;
   margin: auto;
   text-align: center;
   .head {
     width: 35%;
     margin: auto;
+    h2 {
+      font-size: 25px;
+    }
   }
   button {
     @include buttonStyle();
@@ -379,12 +382,16 @@ header {
   .scroll {
     -ms-overflow-style: none;
     scrollbar-width: none;
+
     width: 70vw;
     margin: 2vh auto;
     display: grid;
     overflow-x: scroll;
     grid-template-columns: repeat(6, auto);
     gap: 2em;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     .card {
       border-radius: 5px;
       user-select: none;
@@ -515,13 +522,14 @@ header {
   .updates {
     position: relative;
     top: -20vh;
-    height: 40vh;
+    height: 50vh;
     background-color: white;
     border-radius: 50% 50% 0 0;
   }
   .box {
-    padding-top: 25vh;
+    padding-top: 30vh;
     width: 40%;
+    height: 25vh;
     margin: auto;
     h1 {
       font-size: 44px;
@@ -561,15 +569,15 @@ header {
 }
 footer {
   width: 100%;
-  height: 35vh;
+  height: 45vh;
   .footer {
     border-top: 2px solid #ddd;
-    padding-top: 4em;
+    padding: 4em 0;
     display: flex;
     justify-content: space-around;
     margin: auto;
     width: 70%;
-    height: 25vh;
+    height: 30vh;
     .contactUs {
       width: 30%;
       display: flex;
@@ -667,9 +675,9 @@ footer {
   .copyright {
     border-top: 2px solid #ddd;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 12px;
     width: 70%;
-    height: 8vh;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -728,17 +736,29 @@ footer {
     font-size: 55%;
   }
   .homePage {
-    img {
-      height: 80%;
+    .textBox {
+      top: -45em;
+      width: 35vw;
+      left: 10vw;
+      h2 {
+        font-size: 3.5em;
+      }
+      p {
+        font-size: 1.8em;
+      }
     }
   }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 100px) {
   body {
     font-size: 45%;
     .homePage {
       img {
-        height: 90%;
+        // height: 90%;
+        width: 100%;
+        max-width: 1100px;
+        min-height: 400px;
+        height: auto;
         // transform: scale(1.2);
       }
     }
@@ -746,54 +766,49 @@ footer {
 }
 @media screen and (max-width: 850px) {
   body {
-    font-size: 40%;
+    // font-size: 40%;
   }
 }
 @media screen and (max-width: 768px) {
   body {
     font-size: 50%;
-    // width: 100%;
-    // overflow-x: hidden;
   }
   .topBar {
     display: flex;
     justify-content: center;
-    .country{
+    .country {
       width: 60%;
     }
     .searchBar {
       display: none;
     }
-    .userCart{
+    .userCart {
       display: flex;
-      .cart{
+      .cart {
         border: none;
       }
-      button{
-        span{
+      button {
+        span {
           display: none;
         }
       }
     }
   }
-  header{
-
-    .navs{
+  header {
+    .navs {
       display: none;
     }
   }
   .homePage {
-    img {
-      object-fit: cover;
-    }
     .textBox {
-      top: -50em;
-      width: 80vw;
+      top: -40em;
+      width: 50vw;
+      left: 10vw;
       h2 {
-        font-size: 4em;
+        font-size: 3.5em;
       }
       p {
-        font-size: 1.8em;
+        font-size: 1.7em;
       }
     }
   }

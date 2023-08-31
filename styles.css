@@ -183,11 +183,11 @@ header .join button {
   color: white;
   z-index: 40;
   left: 16vw;
-  top: -35em;
+  top: -33em;
   width: 25vw;
 }
 .homePage .textBox h2 {
-  font-size: 3.1em;
+  font-size: 3em;
   line-height: 1.3em;
 }
 .homePage .textBox p {
@@ -206,7 +206,7 @@ header .join button {
   padding: 0 10px;
   color: white;
   width: 40%;
-  height: 5.5vh;
+  height: 4em;
   font-size: 1em;
   border-radius: 100px;
   padding: 10px;
@@ -333,13 +333,16 @@ header .join button {
 
 .feedback {
   width: 100%;
-  height: 50vh;
+  height: 55vh;
   margin: auto;
   text-align: center;
 }
 .feedback .head {
   width: 35%;
   margin: auto;
+}
+.feedback .head h2 {
+  font-size: 25px;
 }
 .feedback button {
   border: none;
@@ -373,6 +376,9 @@ header .join button {
   overflow-x: scroll;
   grid-template-columns: repeat(6, auto);
   gap: 2em;
+}
+.feedback .scroll::-webkit-scrollbar {
+  display: none;
 }
 .feedback .scroll .card {
   border-radius: 5px;
@@ -498,13 +504,14 @@ header .join button {
 .newsSection .updates {
   position: relative;
   top: -20vh;
-  height: 40vh;
+  height: 50vh;
   background-color: white;
   border-radius: 50% 50% 0 0;
 }
 .newsSection .box {
-  padding-top: 25vh;
+  padding-top: 30vh;
   width: 40%;
+  height: 25vh;
   margin: auto;
 }
 .newsSection .box h1 {
@@ -543,16 +550,16 @@ header .join button {
 
 footer {
   width: 100%;
-  height: 35vh;
+  height: 45vh;
 }
 footer .footer {
   border-top: 2px solid #ddd;
-  padding-top: 4em;
+  padding: 4em 0;
   display: flex;
   justify-content: space-around;
   margin: auto;
   width: 70%;
-  height: 25vh;
+  height: 30vh;
 }
 footer .footer .contactUs {
   width: 30%;
@@ -646,9 +653,9 @@ footer .footer .usefulLinks ul li span {
 footer .copyright {
   border-top: 2px solid #ddd;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 12px;
   width: 70%;
-  height: 8vh;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -703,21 +710,27 @@ footer .footerHighlight:after {
   body {
     font-size: 55%;
   }
-  .homePage img {
-    height: 80%;
+  .homePage .textBox {
+    top: -45em;
+    width: 35vw;
+    left: 10vw;
+  }
+  .homePage .textBox h2 {
+    font-size: 3.5em;
+  }
+  .homePage .textBox p {
+    font-size: 1.8em;
   }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 100px) {
   body {
     font-size: 45%;
   }
   body .homePage img {
-    height: 90%;
-  }
-}
-@media screen and (max-width: 850px) {
-  body {
-    font-size: 40%;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 400px;
+    height: auto;
   }
 }
 @media screen and (max-width: 768px) {
@@ -746,18 +759,15 @@ footer .footerHighlight:after {
   header .navs {
     display: none;
   }
-  .homePage img {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
   .homePage .textBox {
-    top: -50em;
-    width: 80vw;
+    top: -40em;
+    width: 50vw;
+    left: 10vw;
   }
   .homePage .textBox h2 {
-    font-size: 4em;
+    font-size: 3.5em;
   }
   .homePage .textBox p {
-    font-size: 1.8em;
+    font-size: 1.7em;
   }
 }/*# sourceMappingURL=styles.css.map */
