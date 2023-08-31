@@ -722,21 +722,42 @@ footer .footerHighlight:after {
 }
 @media screen and (max-width: 768px) {
   body {
-    background-color: red;
     font-size: 50%;
+  }
+  .topBar {
+    display: flex;
+    justify-content: center;
+  }
+  .topBar .country {
+    width: 60%;
+  }
+  .topBar .searchBar {
+    display: none;
+  }
+  .topBar .userCart {
+    display: flex;
+  }
+  .topBar .userCart .cart {
+    border: none;
+  }
+  .topBar .userCart button span {
+    display: none;
+  }
+  header .navs {
+    display: none;
   }
   .homePage img {
     -o-object-fit: cover;
        object-fit: cover;
   }
   .homePage .textBox {
-    top: -60em;
+    top: -50em;
     width: 80vw;
   }
   .homePage .textBox h2 {
     font-size: 4em;
   }
   .homePage .textBox p {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 }/*# sourceMappingURL=styles.css.map */

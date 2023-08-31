@@ -751,23 +751,49 @@ footer {
 }
 @media screen and (max-width: 768px) {
   body {
-    background-color: red;
     font-size: 50%;
     // width: 100%;
     // overflow-x: hidden;
+  }
+  .topBar {
+    display: flex;
+    justify-content: center;
+    .country{
+      width: 60%;
+    }
+    .searchBar {
+      display: none;
+    }
+    .userCart{
+      display: flex;
+      .cart{
+        border: none;
+      }
+      button{
+        span{
+          display: none;
+        }
+      }
+    }
+  }
+  header{
+
+    .navs{
+      display: none;
+    }
   }
   .homePage {
     img {
       object-fit: cover;
     }
     .textBox {
-      top: -60em;
+      top: -50em;
       width: 80vw;
-      h2{
+      h2 {
         font-size: 4em;
       }
-      p{
-        font-size: 2em;
+      p {
+        font-size: 1.8em;
       }
     }
   }
