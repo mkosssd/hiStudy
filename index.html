@@ -10,7 +10,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
 
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </head>
   <body>
@@ -33,10 +32,11 @@
       </div>
       <div class="userCart">
         <button class="cart">
-          <i class="fa-solid fa-cart-shopping"></i><span>Cart</span> 
+          <i class="fa-solid fa-cart-shopping"></i><span>Cart</span>
         </button>
         <button class="admin">
-          <i class="fa-regular fa-user" style="color: #000000"></i><span>  Admin</span> 
+          <i class="fa-regular fa-user" style="color: #000000"></i
+          ><span> Admin</span>
         </button>
       </div>
     </div>
@@ -51,11 +51,12 @@
           </div>
           <div class="category">
             <button>
-              <i class="fa-solid fa-table-cells-large"></i> Category
+              <i class="fa-solid fa-table-cells-large"></i
+              ><span> Category</span>
             </button>
           </div>
         </div>
-        <div class="navs">
+        <div class="navs" id="navBar">
           <ul>
             <li>Home <i class="fa-solid fa-chevron-down"></i></li>
             <li>Courses <i class="fa-solid fa-chevron-down"></i></li>
@@ -72,20 +73,28 @@
             <li>Elements <i class="fa-solid fa-chevron-down"></i></li>
             <li>Blog <i class="fa-solid fa-chevron-down"></i></li>
           </ul>
+          <button onclick="toggle()"><i class="fa fa-remove"></i></button>
         </div>
-        <div class="join"><button>Join Now</button></div>
+        <div class="join">
+          <button><span>Join Now</span></button>
+        </div>
+        <div class="ham" onclick="toggle()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
-    <main>
+    <main class="blurBg">
       <div class="homePage">
-        <img
+        <!-- <img
           src="https://rainbowit.net/html/histudy/assets/images/bg/bg-image-19.jpg"
           alt="bgImage"
-        />
+          /> -->
         <div class="textBox">
           <h2>
             <span id="brandName">LoStudy</span> Starter is a community for
-            creative people
+            people
           </h2>
           <p>
             We just don't give our student only lecture but real life
@@ -125,20 +134,20 @@
           <span
             >15 courses
             <i class="fa-solid fa-arrow-right" style="color: #ffffff"></i
-              ></span>
-            </div>
-            <div class="box">
-              <h4>IT and Software</h4>
-              <span
-              >15 courses
-              <i class="fa-solid fa-arrow-right" style="color: #ffffff"></i
-                ></span>
-              </div>
-              <div class="box">
-                <h4>Sales Marketing</h4>
+          ></span>
+        </div>
+        <div class="box">
+          <h4>IT and Software</h4>
           <span
-          >15 courses
-          <i class="fa-solid fa-arrow-right" style="color: #ffffff"></i
+            >15 courses
+            <i class="fa-solid fa-arrow-right" style="color: #ffffff"></i
+          ></span>
+        </div>
+        <div class="box">
+          <h4>Sales Marketing</h4>
+          <span
+            >15 courses
+            <i class="fa-solid fa-arrow-right" style="color: #ffffff"></i
           ></span>
         </div>
         <div class="box">
@@ -151,18 +160,18 @@
         <div class="box">
           <h4>Mobile Application</h4>
           <span
-          >15 courses
-          <i class="fa-solid fa-arrow-right" style="color: #ffffff"></i
-            ></span>
-          </div>
-          <div class="box">
+            >15 courses
+            <i class="fa-solid fa-arrow-right" style="color: #ffffff"></i
+          ></span>
+        </div>
+        <div class="box">
           <h4>Finance & Accounting</h4>
           <span
-          >15 courses
-          <i class="fa-solid fa-arrow-right" style="color: #ffffff"></i
-            ></span>
-          </div>
+            >15 courses
+            <i class="fa-solid fa-arrow-right" style="color: #ffffff"></i
+          ></span>
         </div>
+      </div>
       <div class="feedback">
         <div class="head">
           <h2>Student's Feedback</h2>
@@ -171,162 +180,114 @@
             career development, increase your skill with our histudy.
           </p>
         </div>
-        <button class="left" onclick="scroller('left')"><i class="fa-solid fa-arrow-left"></i></button>
-        <button class="right" onclick="scroller('right')"><i class="fa-solid fa-arrow-right"></i></button>
+        <button class="left" onclick="scroller('left')">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button class="right" onclick="scroller('right')">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
         <div class="scroll">
           <div class="card">
-              <div class="userInfo">
-                <img
-                  src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-01.png"
-                  alt=""
-                />
-                <div class="info">
-                  <h3>Martha Moldanado</h3>
-                  <span>Executive Chairman @ Google</span>
-                </div>
-              </div>
-              <div class="feed">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Ullam nemo autem adipisci laborum, ratione dolorum?
-                </p>
-                <div class="rating">
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                </div>
+            <div class="userInfo">
+              <img
+                src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-01.png"
+                alt=""
+              />
+              <div class="info">
+                <h3>Martha Moldanado</h3>
+                <span>Executive Chairman @ Google</span>
               </div>
             </div>
-            <div class="card">
-              <div class="userInfo">
-                <img
-                  src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-01.png"
-                  alt=""
-                />
-                <div class="info">
-                  <h3>Martha Moldanado</h3>
-                  <span>Executive Chairman @ Google</span>
-                </div>
-              </div>
-              <div class="feed">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Ullam nemo autem adipisci laborum, ratione dolorum?
-                </p>
-                <div class="rating">
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                </div>
+            <div class="feed">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+                nemo autem adipisci laborum, ratione dolorum?
+              </p>
+              <div class="rating">
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
               </div>
             </div>
-            <div class="card">
-              <div class="userInfo">
-                <img
-                  src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-01.png"
-                  alt=""
-                />
-                <div class="info">
-                  <h3>Martha Moldanado</h3>
-                  <span>Executive Chairman @ Google</span>
-                </div>
-              </div>
-              <div class="feed">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Ullam nemo autem adipisci laborum, ratione dolorum?
-                </p>
-                <div class="rating">
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="userInfo">
-                <img
-                  src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-01.png"
-                  alt=""
-                />
-                <div class="info">
-                  <h3>Martha Moldanado</h3>
-                  <span>Executive Chairman @ Google</span>
-                </div>
-              </div>
-              <div class="feed">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Ullam nemo autem adipisci laborum, ratione dolorum?
-                </p>
-                <div class="rating">
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="userInfo">
-                <img
-                  src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-01.png"
-                  alt=""
-                />
-                <div class="info">
-                  <h3>Martha Moldanado</h3>
-                  <span>Executive Chairman @ Google</span>
-                </div>
-              </div>
-              <div class="feed">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Ullam nemo autem adipisci laborum, ratione dolorum?
-                </p>
-                <div class="rating">
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="userInfo">
-                <img
-                  src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-01.png"
-                  alt=""
-                />
-                <div class="info">
-                  <h3>Martha Moldanado</h3>
-                  <span>Executive Chairman @ Google</span>
-                </div>
-              </div>
-              <div class="feed">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Ullam nemo autem adipisci laborum, ratione dolorum?
-                </p>
-                <div class="rating">
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                </div>
-              </div>
-            </div>
-            
-            
           </div>
+          <div class="card">
+            <div class="userInfo">
+              <img
+                src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-02.png"
+                alt=""
+              />
+              <div class="info">
+                <h3>Avaya Morito</h3>
+                <span>CEO @ Google</span>
+              </div>
+            </div>
+            <div class="feed">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+                nemo autem adipisci laborum, ratione dolorum?
+              </p>
+              <div class="rating">
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="userInfo">
+              <img
+                src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-01.png"
+                alt=""
+              />
+              <div class="info">
+                <h3>Martha Moldanado</h3>
+                <span>Executive Chairman @ Google</span>
+              </div>
+            </div>
+            <div class="feed">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+                nemo autem adipisci laborum, ratione dolorum?
+              </p>
+              <div class="rating">
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="userInfo">
+              <img
+                src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-01.png"
+                alt=""
+              />
+              <div class="info">
+                <h3>Martha Moldanado</h3>
+                <span>Executive Chairman @ Google</span>
+              </div>
+            </div>
+            <div class="feed">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+                nemo autem adipisci laborum, ratione dolorum?
+              </p>
+              <div class="rating">
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="newsSection">
         <div class="news">
@@ -372,7 +333,7 @@
             <h1>Want to get special offers and Course updates?</h1>
             <div class="subInput">
               <input type="text" placeholder="Enter Your Email" />
-              <button>
+              <button class="subButton">
                 Subscribe
                 <i class="fa-solid fa-arrow-right" style="color: #ffffff"></i>
               </button>

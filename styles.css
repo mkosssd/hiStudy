@@ -14,9 +14,8 @@
   border-bottom: 2px solid #eee;
   display: flex;
   align-items: center;
-  gap: 15em;
   font-size: 12px;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .topBar img {
   width: 17px;
@@ -106,8 +105,24 @@ header .nav .box1 .category button {
   font-weight: 500;
   border-radius: 150px;
 }
+header .nav .ham {
+  display: none;
+  height: 2em;
+  width: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+header .nav .ham span {
+  margin: 3px;
+  height: 2px;
+  display: block;
+  background-color: #aaa;
+}
 header .navs {
   margin-left: -8em;
+}
+header .navs button {
+  display: none;
 }
 header .navs ul {
   list-style: none;
@@ -165,14 +180,16 @@ header .join button {
   font-size: 15px;
   color: white;
   height: 3em;
-  margin-left: -5em;
   border-radius: 10px;
   width: 8em;
   background: linear-gradient(90deg, rgb(47, 87, 239) 11%, rgb(185, 102, 231) 65%);
 }
 
 .homePage {
-  height: 70vh;
+  background-image: url("https://rainbowit.net/html/histudy/assets/images/bg/bg-image-19.jpg");
+  background-size: 100% 90%;
+  background-repeat: no-repeat;
+  height: 80vh;
 }
 .homePage img {
   width: 100%;
@@ -182,19 +199,19 @@ header .join button {
   position: relative;
   color: white;
   z-index: 40;
-  left: 16vw;
-  top: -33em;
+  left: 10vw;
+  top: 7em;
   width: 25vw;
 }
 .homePage .textBox h2 {
   font-size: 3em;
-  line-height: 1.3em;
+  line-height: 1.2em;
 }
 .homePage .textBox p {
-  font-size: 1.5em;
   color: #ddd;
   margin-top: 2.5vh;
   width: 85%;
+  font-size: 1em;
 }
 .homePage .textBox .actions {
   margin-top: 3em;
@@ -206,7 +223,7 @@ header .join button {
   padding: 0 10px;
   color: white;
   width: 40%;
-  height: 4em;
+  height: 3.7em;
   font-size: 1em;
   border-radius: 100px;
   padding: 10px;
@@ -269,9 +286,6 @@ header .join button {
   grid-template-columns: repeat(4, 19em);
 }
 .courses .box {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://rainbowit.net/html/histudy/assets/images/gallery/gallery-thumb-01.jpg");
-  background-position: 50%;
-  background-size: cover;
   height: 8vh;
   justify-content: center;
   overflow: hidden;
@@ -281,6 +295,46 @@ header .join button {
   line-height: 20px;
   font-size: 15px;
   flex-direction: column;
+}
+.courses .box:nth-child(1) {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://rainbowit.net/html/histudy/assets/images/category/image/web-design.jpg");
+  background-size: cover;
+  background-position-y: -3em;
+}
+.courses .box:nth-child(2) {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://rainbowit.net/html/histudy/assets/images/category/image/graphic-design.jpg");
+  background-size: cover;
+  background-position-y: -3em;
+}
+.courses .box:nth-child(3) {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://rainbowit.net/html/histudy/assets/images/category/image/personal-development.jpg");
+  background-size: cover;
+  background-position-y: -3em;
+}
+.courses .box:nth-child(4) {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://rainbowit.net/html/histudy/assets/images/category/image/software.jpg");
+  background-size: cover;
+  background-position-y: -3em;
+}
+.courses .box:nth-child(5) {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://rainbowit.net/html/histudy/assets/images/category/image/sales.jpg");
+  background-size: cover;
+  background-position-y: -3em;
+}
+.courses .box:nth-child(6) {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://rainbowit.net/html/histudy/assets/images/category/image/arts.jpg");
+  background-size: cover;
+  background-position-y: -3em;
+}
+.courses .box:nth-child(7) {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://rainbowit.net/html/histudy/assets/images/category/image/mobile.jpg");
+  background-size: cover;
+  background-position-y: -3em;
+}
+.courses .box:nth-child(8) {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://rainbowit.net/html/histudy/assets/images/category/image/finance.jpg");
+  background-size: cover;
+  background-position-y: -3em;
 }
 .courses .box h4 {
   transform: translateY(10px);
@@ -292,6 +346,9 @@ header .join button {
 }
 .courses .box span i {
   font-size: 12px;
+}
+.courses .box:hover {
+  filter: grayscale(60%);
 }
 .courses .box:hover h4 {
   transform: translateY(0);
@@ -331,6 +388,76 @@ header .join button {
   top: -3.3em;
 }
 
+.blurBg {
+  filter: blur(50px);
+}
+
+.menu {
+  height: 100vh;
+  padding: 2vh 2em;
+  width: 50vmin;
+  position: absolute;
+  top: -5vh;
+  background-color: white;
+  left: 0vh;
+  display: flex;
+  z-index: 50;
+}
+.menu button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0 10px;
+  display: flex;
+  font-size: 15px;
+  position: relative;
+  top: -1em;
+  left: -2em;
+  height: 15px;
+}
+.menu ul {
+  list-style: none;
+  width: 100%;
+  margin-left: 1.5em;
+}
+.menu ul li {
+  cursor: pointer;
+  font-size: 15px;
+  width: 100%;
+  margin: 0.5em auto;
+  font-weight: 500;
+  padding: 6px 0;
+  border-bottom: 1px solid #292929;
+}
+.menu ul li:hover {
+  color: #2f57ef;
+}
+.menu ul li i {
+  display: none;
+}
+.menu ul li .dropdown .links {
+  display: none;
+  font-size: 14px;
+  padding: 0 10px;
+  width: 90%;
+}
+.menu ul li .dropdown .links a {
+  padding: 5px;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+.menu ul li .dropdown .links a:hover {
+  color: #2f57ef;
+}
+.menu ul li .dropdown .links a:nth-child(1) {
+  border-bottom: 1px solid #aaa;
+}
+.menu ul li .dropdown:hover .links {
+  display: block;
+}
+
 .feedback {
   width: 100%;
   height: 55vh;
@@ -338,11 +465,17 @@ header .join button {
   text-align: center;
 }
 .feedback .head {
-  width: 35%;
+  text-align: center;
   margin: auto;
 }
 .feedback .head h2 {
-  font-size: 25px;
+  font-size: 3em;
+  margin-bottom: 0.8em;
+}
+.feedback .head p {
+  font-size: 1.2em;
+  width: 40%;
+  margin: auto;
 }
 .feedback button {
   border: none;
@@ -352,20 +485,22 @@ header .join button {
   border: 1px solid #ddd;
   z-index: 50;
   border-radius: 50%;
-  height: 4em;
-  width: 4em;
+  height: 3em;
+  width: 3em;
   background-color: white;
   position: relative;
-  top: 15em;
+  top: 12em;
+  visibility: hidden;
+  transition: all 0.5s;
 }
-.feedback button i {
-  font-size: 35px;
+.feedback:hover button {
+  visibility: visible;
 }
 .feedback .right {
-  right: -45em;
+  right: -33vw;
 }
 .feedback .left {
-  left: -45em;
+  left: -33vw;
 }
 .feedback .scroll {
   -ms-overflow-style: none;
@@ -405,6 +540,9 @@ header .join button {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.feedback .scroll .card .userInfo .info h3 {
+  font-size: min(2em, 20px);
 }
 .feedback .scroll .card .userInfo .info span {
   font-size: 13px;
@@ -472,15 +610,15 @@ header .join button {
   justify-content: center;
   gap: 2em;
   margin-top: 10vh;
+  flex-wrap: nowrap;
 }
 .newsSection .news .newsCards .card {
   box-shadow: 1px 10px 15px -3px rgba(0, 0, 0, 0.1);
   display: flex;
   z-index: 50;
   flex-direction: column;
-  gap: 2.5em;
   padding: 25px 40px;
-  width: 350px;
+  width: 300px;
   color: black;
   border-radius: 5px;
   height: 220px;
@@ -498,42 +636,44 @@ header .join button {
   transform: scale(104%);
 }
 .newsSection .news .newsCards .card a {
+  margin-top: 5em;
   color: inherit;
   text-decoration: none;
 }
 .newsSection .updates {
   position: relative;
   top: -20vh;
-  height: 50vh;
   background-color: white;
   border-radius: 50% 50% 0 0;
 }
-.newsSection .box {
+.newsSection .updates .box {
   padding-top: 30vh;
+  height: 70vh;
   width: 40%;
-  height: 25vh;
+  height: 50vh;
   margin: auto;
 }
-.newsSection .box h1 {
+.newsSection .updates .box h1 {
   font-size: 44px;
   text-align: center;
   font-weight: 700;
   color: #192335;
 }
-.newsSection .box .subInput {
+.newsSection .updates .box .subInput {
   margin-top: 2em;
   display: flex;
   align-items: center;
 }
-.newsSection .box .subInput input {
+.newsSection .updates .box .subInput input {
   height: 4vh;
+  margin: auto;
   border-radius: 150px;
-  width: 100%;
+  width: 45em;
   padding: 15px 20px;
   border: 2px solid #eee;
   font-size: 15px;
 }
-.newsSection .box .subInput button {
+.newsSection .updates .box .subInput .subButton {
   border: none;
   background: transparent;
   cursor: pointer;
@@ -541,9 +681,9 @@ header .join button {
   color: white;
   height: 5vh;
   position: relative;
-  left: -9em;
-  border-radius: 50px;
+  left: -9.5em;
   width: 10em;
+  border-radius: 100px;
   padding: 5px 10px;
   background: linear-gradient(90deg, rgb(47, 87, 239) 11%, rgb(185, 102, 231) 65%);
 }
@@ -587,7 +727,7 @@ footer .footer .contactUs button {
 }
 footer .footer .contactUs button .first {
   transition: all 1s;
-  transform: translateX(-40px);
+  transform: translateX(-55px);
 }
 footer .footer .contactUs button .second {
   transition: all 1s;
@@ -601,7 +741,7 @@ footer .footer .contactUs button:hover span {
   transform: translateX(0);
 }
 footer .footer .contactUs button:hover .second {
-  transform: translateX(40px);
+  transform: translateX(55px);
 }
 footer .footer .contactUs button:hover .first {
   transform: translateX(-5px);
@@ -700,46 +840,129 @@ footer .footerHighlight:after {
   body {
     font-size: 85%;
   }
+  header {
+    font-size: 70%;
+  }
+  .homePage {
+    background-position-x: -15em;
+    background-size: inherit;
+  }
+  .newsSection .updates {
+    font-size: 65%;
+  }
+  .newsSection .updates .subInput {
+    transform: translateX(-10em);
+    width: 60vw;
+    margin: auto;
+  }
+  .newsSection .updates .subButton {
+    left: 2em;
+  }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1350px) {
+  .topBar .searchBar input {
+    height: 2vh;
+  }
+  .homePage {
+    background-position-x: -25em;
+    background-size: inherit;
+  }
+  header {
+    height: 8vh;
+  }
+  header .nav {
+    width: 100%;
+    gap: 48vw;
+    justify-content: space-evenly;
+  }
+  header .nav .box1 {
+    gap: 0em;
+  }
+  header .nav .ham {
+    display: block;
+  }
+  header .nav .box1 .category button {
+    height: 2em;
+    width: 2em;
+    background: none;
+  }
+  header .nav .box1 .category button span {
+    display: none;
+  }
+  header .navs {
+    display: none;
+  }
+  header .join {
+    display: none;
+  }
+  .updates .subInput input {
+    width: 50vw;
+  }
+  .updates .newsSection .updates .subInput {
+    margin: auto;
+  }
+  .updates .newsSection .updates .subButton {
+    left: 2em;
+  }
+}
+@media screen and (max-width: 1150px) {
   body {
     font-size: 65%;
   }
-}
-@media screen and (max-width: 1100px) {
-  body {
-    font-size: 55%;
+  .homePage {
+    background-position-x: -75em;
+    background-size: inherit;
+  }
+  header .nav .box1 .logo img {
+    width: 20em;
+  }
+  .topBar {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .topBar .searchBar input {
+    height: 2vh;
+    width: 25em;
+  }
+  .topBar .userCart .cart {
+    border: none;
+  }
+  .topBar .userCart button span {
+    display: none;
   }
   .homePage .textBox {
-    top: -45em;
     width: 35vw;
-    left: 10vw;
+  }
+  .homePage .textBox .actions {
+    margin-top: 8em;
+  }
+  .homePage .textBox .actions button {
+    width: 15em;
   }
   .homePage .textBox h2 {
     font-size: 3.5em;
   }
   .homePage .textBox p {
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
-}
-@media screen and (max-width: 100px) {
-  body {
-    font-size: 45%;
-  }
-  body .homePage img {
+  .homePage .textBox img {
     width: 100%;
     max-width: 1100px;
     min-height: 400px;
     height: auto;
+  }
+  .courses {
+    gap: 4em 2em;
+    grid-template-columns: repeat(2, 33em);
   }
 }
 @media screen and (max-width: 768px) {
   body {
     font-size: 50%;
   }
-  .topBar {
-    display: flex;
-    justify-content: center;
+  .homePage {
+    background-position-x: -140em;
+    background-size: auto;
   }
   .topBar .country {
     width: 60%;
@@ -759,15 +982,142 @@ footer .footerHighlight:after {
   header .navs {
     display: none;
   }
+  .homePage img {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: auto;
+  }
   .homePage .textBox {
-    top: -40em;
-    width: 50vw;
-    left: 10vw;
+    width: 100vw;
+    top: 15em;
+    left: 0.5em;
   }
   .homePage .textBox h2 {
-    font-size: 3.5em;
+    font-size: 4em;
+    width: 80%;
   }
   .homePage .textBox p {
-    font-size: 1.7em;
+    font-size: 2em;
+  }
+  .homePage .textBox .actions {
+    font-size: 20px;
+  }
+  .homePage .textBox .actions button {
+    font-size: 20px;
+    width: 12em;
+    height: 3.5em;
+  }
+  .courses {
+    gap: 6em;
+    grid-template-columns: repeat(1, 45em);
+  }
+  .feedback .head h2 {
+    font-size: 4em;
+  }
+  .feedback .head p {
+    font-size: 1.8em;
+    width: 100%;
+  }
+  .feedback button {
+    top: 20em;
+    height: 5em;
+    width: 5em;
+  }
+  .feedback .right {
+    right: -40vw;
+  }
+  .feedback .left {
+    left: -40vw;
+  }
+  .feedback .scroll {
+    width: 90vw;
+  }
+  footer .footer {
+    height: 95vh;
+    flex-direction: column;
+    width: 95%;
+  }
+  footer .footer .contactUs {
+    width: 100%;
+  }
+  footer .footer .contactUs button {
+    height: 7em;
+    width: 25em;
+  }
+  footer .footer .usefulLinks {
+    width: 95%;
+  }
+  footer .footer .usefulLinks h3 {
+    font-size: 2.5em;
+    font-weight: 600;
+  }
+  footer .copyright {
+    font-size: 1.8em;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+  footer .copyright .others ul {
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .newsSection .updates {
+    padding-top: 0;
+    border-radius: 0;
+    height: 60vh;
+    width: 100%;
+  }
+  .newsSection .updates .box {
+    height: 50vh;
+    width: 100%;
+  }
+  .newsSection .updates .box h1 {
+    font-size: 5em;
+    width: 100%;
+  }
+  .newsSection .updates .box .subInput {
+    width: 90%;
+    flex-direction: column;
+  }
+  .newsSection .updates .box .subInput input {
+    height: 2vh;
+    width: 80%;
+    margin: 2vh auto;
+    margin-left: 5em;
+  }
+  .newsSection .updates .box .subInput .subButton {
+    left: 5em;
+    width: 10em;
+    font-size: 2em;
+  }
+  .newsSection .news {
+    height: 100vh;
+    width: 100%;
+  }
+  .newsSection .news .head {
+    font-size: 1.2em;
+    margin-bottom: 2vh;
+    width: 95%;
+  }
+  .newsSection .news .body {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+  }
+  .newsSection .news .body p {
+    margin-bottom: 2vh;
+    width: 100%;
+    font-size: 15px;
+  }
+  .newsSection .newsCards {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: 60vh;
+    width: 40%;
+    align-items: center;
   }
 }/*# sourceMappingURL=styles.css.map */
