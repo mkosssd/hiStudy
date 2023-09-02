@@ -258,6 +258,23 @@ header .join button {
   padding: 0 5px;
 }
 
+.data {
+  height: 80vh;
+  width: 100vw;
+  background-image: url("https://rainbowit.net/html/histudy/assets/images/bg/bg-image-20.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.data div {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 55px;
+}
+
 @keyframes myanim {
   15% {
     margin-left: 10px;
