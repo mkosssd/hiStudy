@@ -148,7 +148,7 @@ header .navs li .links {
   min-width: 160px;
   z-index: 1;
 }
-header .navs li:hover i {
+header .navs li:hover div p i {
   transform: rotate(180deg);
   transition: all 0.4s;
 }
@@ -158,16 +158,18 @@ header .navs li:hover .links:hover {
   display: block;
   width: 1em;
   border-radius: 0 0 10px 10px;
-  padding: 15px 10px;
   background-color: white;
+  padding: 15px 25px;
 }
 header .navs li:hover .links a,
 header .navs li:hover .links:hover a {
   color: black;
+  width: 90%;
+  margin: auto;
   border-radius: 5px;
   font-weight: normal;
-  font-size: 10px;
-  padding: 6px 25px;
+  font-size: 13px;
+  padding: 6px;
   text-decoration: none;
   display: block;
 }
@@ -216,6 +218,7 @@ header .enroll span {
   background-size: 100% 90%;
   background-repeat: no-repeat;
   height: 80vh;
+  padding: 10vh auto;
 }
 .homePage img {
   width: 100%;
@@ -625,40 +628,38 @@ header .enroll span {
   animation: myanim forwards 2s;
 }
 .newsSection .news .newsCards {
-  width: 80%;
-  z-index: 50;
+  width: 70%;
   margin: auto;
-  display: flex;
-  justify-content: space-evenly;
-  gap: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em;
   margin-top: 10vh;
-  flex-wrap: nowrap;
 }
 .newsSection .news .newsCards .card {
   box-shadow: 1px 10px 15px -3px rgba(0, 0, 0, 0.1);
   display: flex;
-  z-index: 50;
+  z-index: 5;
   flex-direction: column;
   padding: 40px;
-  width: 300px;
   color: black;
   border-radius: 5px;
-  height: 200px;
+  height: 25vh;
   background-color: white;
   transition: all 0.5s;
 }
 .newsSection .news .newsCards .card h2 {
   font-size: 25px;
+  margin-top: 2vw;
 }
 .newsSection .news .newsCards .card span {
   color: #6b7385;
-  font-size: 16px;
+  font-size: 13px;
 }
 .newsSection .news .newsCards .card:hover {
   transform: scale(104%);
 }
 .newsSection .news .newsCards .card a {
-  margin-top: 4em;
+  margin-top: 2vw;
   color: inherit;
   text-decoration: none;
 }
@@ -678,8 +679,9 @@ header .enroll span {
 }
 .newsSection .updates .box {
   width: 40%;
-  height: 50vh;
+  height: 20vh;
   margin: auto;
+  padding-bottom: 10vh;
 }
 .newsSection .updates .box h1 {
   font-size: 44px;
@@ -963,10 +965,24 @@ footer .footerHighlight:after {
   .updates .subInput input {
     width: 50vw;
   }
-  .updates .newsSection .updates .subInput {
+  .newsSection .news {
+    width: 100%;
+  }
+  .newsSection .news .newsCards {
+    width: 85%;
+    margin: auto;
+    margin-top: 10vh;
+    grid-template-columns: repeat(3, 33%);
+    justify-content: center;
+  }
+  .newsSection .news .head,
+  .newsSection .news .body {
+    width: 90%;
+  }
+  .newsSection .updates .subInput {
     margin: auto;
   }
-  .updates .newsSection .updates .subButton {
+  .newsSection .updates .subButton {
     left: 2em;
   }
   .menu {
@@ -1122,6 +1138,46 @@ footer .footerHighlight:after {
   footer .footer .contactUs button {
     width: 23vw;
   }
+  .newsSection .news {
+    width: 100%;
+    height: 90vh;
+  }
+  .newsSection .news .newsCards {
+    width: 85%;
+    margin: auto;
+    margin-top: 10vh;
+    grid-template-columns: repeat(2, 40%);
+    grid-template-rows: auto auto;
+    justify-content: center;
+  }
+  .newsSection .news .head,
+  .newsSection .news .body {
+    width: 70%;
+  }
+  .newsSection .news .news {
+    height: 100vh;
+    width: 100%;
+  }
+  .newsSection .news .news .head {
+    font-size: 1.2em;
+    margin-bottom: 2vh;
+    width: 95%;
+  }
+  .newsSection .news .news .body {
+    width: 95%;
+    flex-direction: column;
+  }
+  .newsSection .news .news .body p {
+    margin-bottom: 2vh;
+    font-size: 15px;
+    width: 100%;
+  }
+  .newsSection .updates .subInput {
+    margin: auto;
+  }
+  .newsSection .updates .subButton {
+    left: 2em;
+  }
 }
 @media screen and (max-width: 768px) {
   body {
@@ -1238,14 +1294,28 @@ footer .footerHighlight:after {
     flex-wrap: wrap;
     width: 100%;
   }
+  .newsSection {
+    width: 100%;
+  }
+  .newsSection .news {
+    width: 100%;
+  }
+  .newsSection .news .newsCards {
+    display: grid;
+    height: 25vh;
+    grid-template-columns: 100%;
+  }
+  .newsSection .news .newsCards .card {
+    height: 12vh;
+  }
   .newsSection .updates {
     padding-top: 0;
+    margin-top: -10vh;
     border-radius: 0;
-    height: 60vh;
     width: 100%;
   }
   .newsSection .updates .box {
-    height: 50vh;
+    height: 30vh;
     width: 100%;
   }
   .newsSection .updates .box h1 {
@@ -1285,13 +1355,6 @@ footer .footerHighlight:after {
     margin-bottom: 2vh;
     width: 100%;
     font-size: 15px;
-  }
-  .newsSection .newsCards {
-    flex-wrap: nowrap;
-    flex-direction: column;
-    height: 60vh;
-    width: 40%;
-    align-items: center;
   }
   .data {
     height: 60vh;
