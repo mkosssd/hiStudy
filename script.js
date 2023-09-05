@@ -55,6 +55,7 @@ function Counter() {
     } else {
       clearInterval(interval);
     }
+
   }, 40);
 }
 function update() {

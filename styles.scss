@@ -40,7 +40,7 @@ body {
   }
   .searchBar {
     input {
-      height: 3vh;
+      height: 3ch;
       border-radius: 150px;
       background-color: white;
       width: 30vmax;
@@ -51,7 +51,7 @@ body {
     button {
       @include buttonStyle();
       position: relative;
-      left: -4.5vh;
+      left: -4.5ch;
       i {
         font-size: 15px;
       }
@@ -83,7 +83,7 @@ header {
   .nav {
     position: sticky;
     top: 0;
-    height: 8vh;
+    height: 10ch;
     margin: auto;
     width: 89%;
     display: flex;
@@ -145,7 +145,7 @@ header {
       }
     }
     li {
-      padding: 3vh 0;
+      padding: 3ch 0;
       .links {
         display: none;
         position: absolute;
@@ -161,7 +161,7 @@ header {
       }
       .links,
       .links:hover {
-        margin-top: 2.5vh;
+        margin-top: 2.5ch;
         display: block;
         width: 1em;
         border-radius: 0 0 10px 10px;
@@ -234,8 +234,8 @@ header {
   background-image: url("https://rainbowit.net/html/histudy/assets/images/bg/bg-image-19.jpg");
   background-size: 100% 90%;
   background-repeat: no-repeat;
-  height: 80vh;
-  padding: 10vh auto;
+  height: 80ch;
+  padding: 10ch auto;
   img {
     width: 100%;
     height: 100%;
@@ -253,7 +253,7 @@ header {
     }
     p {
       color: #ddd;
-      margin-top: 2.5vh;
+      margin-top: 2.5ch;
       width: 85%;
       font-size: 1.2em;
     }
@@ -301,7 +301,7 @@ header {
   }
 }
 .data {
-  height: 45vh;
+  height: 45ch;
   margin: 5em 0;
   width: 100%;
   background-image: url("https://rainbowit.net/html/histudy/assets/images/bg/bg-image-20.jpg");
@@ -363,7 +363,7 @@ header {
   }
 }
 .courses {
-  margin: 10vh auto;
+  margin: 10ch auto;
   width: 80%;
   display: grid;
   cursor: pointer;
@@ -420,8 +420,8 @@ header {
       background-size: cover;
       background-position-y: -3em;
     }
-    height: 8vh;
-    // padding: 4vh auto;
+    height: 8ch;
+    // padding: 4ch auto;
     justify-content: center;
     overflow: hidden;
     align-items: center;
@@ -489,8 +489,9 @@ header {
 
 .feedback {
   // width: 90%;
-  height: 55vh;
+  height: 45ch;
   margin: auto;
+  padding: 6em ; 
   text-align: center;
   .head {
     text-align: center;
@@ -535,7 +536,7 @@ header {
     -ms-overflow-style: none;
     scrollbar-width: none;
     width: 1290px;
-    margin: 2vh auto;
+    margin: 2ch auto;
     display: grid;
     overflow-x: scroll;
     grid-template-columns: repeat(6, auto);
@@ -596,8 +597,8 @@ header {
 }
 
 .newsSection {
-  margin-top: 5vh;
-
+  margin-top: 5ch;
+  padding:6em 0;
   width: 100%;
   .news {
     background: linear-gradient(
@@ -606,9 +607,9 @@ header {
       rgba(47, 87, 239, 1) 80%
     );
     width: 100%;
-    padding-top: 10vh;
+    padding-top: 10ch;
     color: white;
-    height: 60vh;
+    height: 60ch;
     .head {
       width: 70%;
       margin: auto;
@@ -660,7 +661,7 @@ header {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 2em;
-      margin-top: 10vh;
+      margin-top: 10ch;
       .card {
         box-shadow: 1px 10px 15px -3px rgba(0, 0, 0, 0.1);
         display: flex;
@@ -669,7 +670,7 @@ header {
         padding: 40px;
         color: black;
         border-radius: 5px;
-        height: 25vh;
+        height: 20ch;
         background-color: white;
         transition: all 0.5s;
         h2 {
@@ -696,9 +697,9 @@ header {
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
-    top: -17.5vh;
+    top: -17.5ch;
     width: 100%;
-    height: 20vh;
+    height: 20ch;
     background-size: cover;
   }
   .updates {
@@ -706,9 +707,9 @@ header {
     background-color: white;
     .box {
       width: 40%;
-      height: 20vh;
+      height: 30ch;
       margin: auto;
-      padding-bottom: 10vh;
+      padding-bottom: 10ch;
       h1 {
         font-size: 44px;
         text-align: center;
@@ -720,7 +721,7 @@ header {
         display: flex;
         align-items: center;
         input {
-          height: 4vh;
+          height: 4ch;
           margin: auto;
           border-radius: 150px;
           width: 45em;
@@ -731,7 +732,7 @@ header {
         .subButton {
           @include buttonStyle();
           color: white;
-          height: 5vh;
+          height: 5ch;
           position: relative;
           left: -9.5em;
           width: 10em;
@@ -749,7 +750,7 @@ header {
 }
 footer {
   width: 100%;
-  height: 45vh;
+  height: 45ch;
   .footer {
     border-top: 2px solid #ddd;
     padding: 4em 0;
@@ -757,7 +758,7 @@ footer {
     justify-content: space-around;
     margin: auto;
     width: 70%;
-    height: 30vh;
+    height: 30ch;
     .contactUs {
       width: 30vw;
       display: flex;
@@ -857,7 +858,7 @@ footer {
     font-weight: 300;
     font-size: 12px;
     width: 70%;
-    height: 10vh;
+    height: 10ch;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -955,7 +956,7 @@ footer {
   .topBar {
     .searchBar {
       input {
-        height: 2vh;
+        height: 2ch;
       }
     }
   }
@@ -980,7 +981,7 @@ footer {
     }
   }
   header {
-    height: 8vh;
+    height: 8ch;
     .nav {
       .box1 {
         gap: 0em;
@@ -1013,6 +1014,7 @@ footer {
     }
   }
   .updates {
+    
     .subInput {
       input {
         width: 50vw;
@@ -1025,7 +1027,7 @@ footer {
       .newsCards {
         width: 85%;
         margin: auto;
-        margin-top: 10vh;
+        margin-top: 10ch;
         grid-template-columns: repeat(3, 33%);
         justify-content: center;
       }
@@ -1049,7 +1051,7 @@ footer {
     height: 100vh;
     width: 100vw;
     position: fixed;
-    left: 0vh;
+    left: 0ch;
     top: 0;
     display: flex;
     z-index: 50;
@@ -1134,7 +1136,9 @@ footer {
     background-size: inherit;
   }
   header {
+    height: 12ch;
     .nav {
+      height: 12ch;
       width: 100%;
       justify-content: space-around;
       gap: 45vw;
@@ -1153,7 +1157,7 @@ footer {
 
     .searchBar {
       input {
-        height: 2vh;
+        height: 2ch;
         width: 25em;
       }
     }
@@ -1224,11 +1228,11 @@ footer {
   .newsSection {
     .news {
       width: 100%;
-      height: 90vh;
+      height: 90ch;
       .newsCards {
         width: 85%;
         margin: auto;
-        margin-top: 10vh;
+        margin-top: 10ch;
         grid-template-columns: repeat(2, 40%);
         grid-template-rows: auto auto;
         justify-content: center;
@@ -1238,18 +1242,18 @@ footer {
         width: 70%;
       }
       .news {
-        height: 100vh;
+        height: 100ch;
         width: 100%;
         .head {
           font-size: 1.2em;
-          margin-bottom: 2vh;
+          margin-bottom: 2ch;
           width: 95%;
         }
         .body {
           width: 95%;
           flex-direction: column;
           p {
-            margin-bottom: 2vh;
+            margin-bottom: 2ch;
             font-size: 15px;
             width: 100%;
           }
@@ -1257,6 +1261,9 @@ footer {
       }
     }
     .updates {
+      .box{
+        height: 60ch;
+      }
       .subInput {
         // width: 5vw;
         margin: auto;
@@ -1267,13 +1274,14 @@ footer {
     }
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   body {
     font-size: 50%;
   }
   .homePage {
     background-position-x: -140em;
-    background-size: auto;
+    height: 150ch;
+    
   }
   .topBar {
     width: 100%;
@@ -1296,7 +1304,9 @@ footer {
     }
   }
   header {
+    height: 12ch;
     .navs {
+      padding-top: 2ch;
       display: none;
     }
   }
@@ -1334,7 +1344,7 @@ footer {
     grid-template-columns: repeat(1, 49em);
   }
   .feedback {
-    margin-bottom: 15vh;
+    margin-bottom: 45ch;
     .head {
       h2 {
         font-size: 4em;
@@ -1357,25 +1367,26 @@ footer {
     }
     .scroll {
       width: 90vw;
+      margin-left: -7ch;
     }
   }
   footer {
     .footer {
-      height: 95vh;
+      height: 150ch;
       flex-direction: column;
       width: 95%;
 
       .contactUs {
         width: 100%;
         button {
-          height: 7em;
+          height: 7ch;
           width: 25em;
         }
       }
       .usefulLinks {
         width: 95%;
         h3 {
-          font-size: 2.5em;
+          font-size: 2ch;
           font-weight: 600;
         }
       }
@@ -1399,21 +1410,22 @@ footer {
     .news {
       width: 100%;
       .newsCards {
+        height: 15ch;
         display: grid;
-        height: 25vh;
         grid-template-columns: 100%;
         .card {
-          height: 12vh;
+          height: 20ch;
         }
       }
     }
     .updates {
       padding-top: 0;
-      margin-top: -10vh;
+      padding-top: 100ch;
+      padding-bottom: 50ch;
       border-radius: 0;
       width: 100%;
       .box {
-        height: 30vh;
+        height: 30ch;
         width: 100%;
         h1 {
           font-size: 5em;
@@ -1423,9 +1435,9 @@ footer {
           width: 90%;
           flex-direction: column;
           input {
-            height: 2vh;
+            height: 2ch;
             width: 80%;
-            margin: 2vh auto;
+            margin: 2ch auto;
             margin-left: 4em;
           }
           .subButton {
@@ -1437,11 +1449,11 @@ footer {
       }
     }
     .news {
-      height: 100vh;
+      height: 100ch;
       width: 100%;
       .head {
         font-size: 1.2em;
-        margin-bottom: 2vh;
+        margin-bottom: 2ch;
         width: 95%;
       }
       .body {
@@ -1449,7 +1461,7 @@ footer {
         display: flex;
         flex-direction: column;
         p {
-          margin-bottom: 2vh;
+          margin-bottom: 2ch;
           width: 100%;
           font-size: 15px;
         }
@@ -1457,7 +1469,7 @@ footer {
     }
   }
   .data {
-    height: 60vh;
+    height: 80ch;
     div {
       flex-wrap: wrap;
       .counter {
@@ -1468,4 +1480,5 @@ footer {
       }
     }
   }
+ 
 }

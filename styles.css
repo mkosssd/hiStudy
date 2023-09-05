@@ -34,7 +34,7 @@ body {
   font-size: 9px;
 }
 .topBar .searchBar input {
-  height: 3vh;
+  height: 3ch;
   border-radius: 150px;
   background-color: white;
   width: 30vmax;
@@ -48,7 +48,7 @@ body {
   cursor: pointer;
   padding: 0 10px;
   position: relative;
-  left: -4.5vh;
+  left: -4.5ch;
 }
 .topBar .searchBar button i {
   font-size: 15px;
@@ -80,7 +80,7 @@ header {
 header .nav {
   position: sticky;
   top: 0;
-  height: 8vh;
+  height: 10ch;
   margin: auto;
   width: 89%;
   display: flex;
@@ -140,7 +140,7 @@ header .navs ul li i {
   position: relative;
 }
 header .navs li {
-  padding: 3vh 0;
+  padding: 3ch 0;
 }
 header .navs li .links {
   display: none;
@@ -154,7 +154,7 @@ header .navs li:hover div p i {
 }
 header .navs li:hover .links,
 header .navs li:hover .links:hover {
-  margin-top: 2.5vh;
+  margin-top: 2.5ch;
   display: block;
   width: 1em;
   border-radius: 0 0 10px 10px;
@@ -217,8 +217,8 @@ header .enroll span {
   background-image: url("https://rainbowit.net/html/histudy/assets/images/bg/bg-image-19.jpg");
   background-size: 100% 90%;
   background-repeat: no-repeat;
-  height: 80vh;
-  padding: 10vh auto;
+  height: 80ch;
+  padding: 10ch auto;
 }
 .homePage img {
   width: 100%;
@@ -238,7 +238,7 @@ header .enroll span {
 }
 .homePage .textBox p {
   color: #ddd;
-  margin-top: 2.5vh;
+  margin-top: 2.5ch;
   width: 85%;
   font-size: 1.2em;
 }
@@ -288,7 +288,7 @@ header .enroll span {
 }
 
 .data {
-  height: 45vh;
+  height: 45ch;
   margin: 5em 0;
   width: 100%;
   background-image: url("https://rainbowit.net/html/histudy/assets/images/bg/bg-image-20.jpg");
@@ -349,7 +349,7 @@ header .enroll span {
   }
 }
 .courses {
-  margin: 10vh auto;
+  margin: 10ch auto;
   width: 80%;
   display: grid;
   cursor: pointer;
@@ -359,7 +359,7 @@ header .enroll span {
   grid-template-columns: repeat(4, 19em);
 }
 .courses .box {
-  height: 8vh;
+  height: 8ch;
   justify-content: center;
   overflow: hidden;
   align-items: center;
@@ -462,8 +462,9 @@ header .enroll span {
 }
 
 .feedback {
-  height: 55vh;
+  height: 45ch;
   margin: auto;
+  padding: 6em;
   text-align: center;
 }
 .feedback .head {
@@ -510,7 +511,7 @@ header .enroll span {
   -ms-overflow-style: none;
   scrollbar-width: none;
   width: 1290px;
-  margin: 2vh auto;
+  margin: 2ch auto;
   display: grid;
   overflow-x: scroll;
   grid-template-columns: repeat(6, auto);
@@ -569,15 +570,16 @@ header .enroll span {
 }
 
 .newsSection {
-  margin-top: 5vh;
+  margin-top: 5ch;
+  padding: 6em 0;
   width: 100%;
 }
 .newsSection .news {
   background: linear-gradient(270deg, rgba(185, 102, 231, 0.8) 10%, rgb(47, 87, 239) 80%);
   width: 100%;
-  padding-top: 10vh;
+  padding-top: 10ch;
   color: white;
-  height: 60vh;
+  height: 60ch;
 }
 .newsSection .news .head {
   width: 70%;
@@ -633,7 +635,7 @@ header .enroll span {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2em;
-  margin-top: 10vh;
+  margin-top: 10ch;
 }
 .newsSection .news .newsCards .card {
   box-shadow: 1px 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -643,7 +645,7 @@ header .enroll span {
   padding: 40px;
   color: black;
   border-radius: 5px;
-  height: 25vh;
+  height: 20ch;
   background-color: white;
   transition: all 0.5s;
 }
@@ -668,9 +670,9 @@ header .enroll span {
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
-  top: -17.5vh;
+  top: -17.5ch;
   width: 100%;
-  height: 20vh;
+  height: 20ch;
   background-size: cover;
 }
 .newsSection .updates {
@@ -679,9 +681,9 @@ header .enroll span {
 }
 .newsSection .updates .box {
   width: 40%;
-  height: 20vh;
+  height: 30ch;
   margin: auto;
-  padding-bottom: 10vh;
+  padding-bottom: 10ch;
 }
 .newsSection .updates .box h1 {
   font-size: 44px;
@@ -695,7 +697,7 @@ header .enroll span {
   align-items: center;
 }
 .newsSection .updates .box .subInput input {
-  height: 4vh;
+  height: 4ch;
   margin: auto;
   border-radius: 150px;
   width: 45em;
@@ -709,7 +711,7 @@ header .enroll span {
   cursor: pointer;
   padding: 0 10px;
   color: white;
-  height: 5vh;
+  height: 5ch;
   position: relative;
   left: -9.5em;
   width: 10em;
@@ -720,7 +722,7 @@ header .enroll span {
 
 footer {
   width: 100%;
-  height: 45vh;
+  height: 45ch;
 }
 footer .footer {
   border-top: 2px solid #ddd;
@@ -729,7 +731,7 @@ footer .footer {
   justify-content: space-around;
   margin: auto;
   width: 70%;
-  height: 30vh;
+  height: 30ch;
 }
 footer .footer .contactUs {
   width: 30vw;
@@ -825,7 +827,7 @@ footer .copyright {
   font-weight: 300;
   font-size: 12px;
   width: 70%;
-  height: 10vh;
+  height: 10ch;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -914,7 +916,7 @@ footer .footerHighlight:after {
 }
 @media screen and (max-width: 1350px) {
   .topBar .searchBar input {
-    height: 2vh;
+    height: 2ch;
   }
   .homePage {
     background-position-x: -25em;
@@ -935,7 +937,7 @@ footer .footerHighlight:after {
     width: 90vw;
   }
   header {
-    height: 8vh;
+    height: 8ch;
   }
   header .nav {
     width: 80%;
@@ -971,7 +973,7 @@ footer .footerHighlight:after {
   .newsSection .news .newsCards {
     width: 85%;
     margin: auto;
-    margin-top: 10vh;
+    margin-top: 10ch;
     grid-template-columns: repeat(3, 33%);
     justify-content: center;
   }
@@ -990,7 +992,7 @@ footer .footerHighlight:after {
     height: 100vh;
     width: 100vw;
     position: fixed;
-    left: 0vh;
+    left: 0ch;
     top: 0;
     display: flex;
     z-index: 50;
@@ -1074,7 +1076,11 @@ footer .footerHighlight:after {
     background-position-x: -75em;
     background-size: inherit;
   }
+  header {
+    height: 12ch;
+  }
   header .nav {
+    height: 12ch;
     width: 100%;
     justify-content: space-around;
     gap: 45vw;
@@ -1087,7 +1093,7 @@ footer .footerHighlight:after {
     justify-content: space-evenly;
   }
   .topBar .searchBar input {
-    height: 2vh;
+    height: 2ch;
     width: 25em;
   }
   .topBar .userCart .cart {
@@ -1140,12 +1146,12 @@ footer .footerHighlight:after {
   }
   .newsSection .news {
     width: 100%;
-    height: 90vh;
+    height: 90ch;
   }
   .newsSection .news .newsCards {
     width: 85%;
     margin: auto;
-    margin-top: 10vh;
+    margin-top: 10ch;
     grid-template-columns: repeat(2, 40%);
     grid-template-rows: auto auto;
     justify-content: center;
@@ -1155,12 +1161,12 @@ footer .footerHighlight:after {
     width: 70%;
   }
   .newsSection .news .news {
-    height: 100vh;
+    height: 100ch;
     width: 100%;
   }
   .newsSection .news .news .head {
     font-size: 1.2em;
-    margin-bottom: 2vh;
+    margin-bottom: 2ch;
     width: 95%;
   }
   .newsSection .news .news .body {
@@ -1168,9 +1174,12 @@ footer .footerHighlight:after {
     flex-direction: column;
   }
   .newsSection .news .news .body p {
-    margin-bottom: 2vh;
+    margin-bottom: 2ch;
     font-size: 15px;
     width: 100%;
+  }
+  .newsSection .updates .box {
+    height: 60ch;
   }
   .newsSection .updates .subInput {
     margin: auto;
@@ -1179,13 +1188,13 @@ footer .footerHighlight:after {
     left: 2em;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   body {
     font-size: 50%;
   }
   .homePage {
     background-position-x: -140em;
-    background-size: auto;
+    height: 150ch;
   }
   .topBar {
     width: 100%;
@@ -1205,7 +1214,11 @@ footer .footerHighlight:after {
   .topBar .userCart button span {
     display: none;
   }
+  header {
+    height: 12ch;
+  }
   header .navs {
+    padding-top: 2ch;
     display: none;
   }
   .homePage img {
@@ -1241,7 +1254,7 @@ footer .footerHighlight:after {
     grid-template-columns: repeat(1, 49em);
   }
   .feedback {
-    margin-bottom: 15vh;
+    margin-bottom: 45ch;
   }
   .feedback .head h2 {
     font-size: 4em;
@@ -1263,9 +1276,10 @@ footer .footerHighlight:after {
   }
   .feedback .scroll {
     width: 90vw;
+    margin-left: -7ch;
   }
   footer .footer {
-    height: 95vh;
+    height: 150ch;
     flex-direction: column;
     width: 95%;
   }
@@ -1273,14 +1287,14 @@ footer .footerHighlight:after {
     width: 100%;
   }
   footer .footer .contactUs button {
-    height: 7em;
+    height: 7ch;
     width: 25em;
   }
   footer .footer .usefulLinks {
     width: 95%;
   }
   footer .footer .usefulLinks h3 {
-    font-size: 2.5em;
+    font-size: 2ch;
     font-weight: 600;
   }
   footer .copyright {
@@ -1301,21 +1315,22 @@ footer .footerHighlight:after {
     width: 100%;
   }
   .newsSection .news .newsCards {
+    height: 15ch;
     display: grid;
-    height: 25vh;
     grid-template-columns: 100%;
   }
   .newsSection .news .newsCards .card {
-    height: 12vh;
+    height: 20ch;
   }
   .newsSection .updates {
     padding-top: 0;
-    margin-top: -10vh;
+    padding-top: 100ch;
+    padding-bottom: 50ch;
     border-radius: 0;
     width: 100%;
   }
   .newsSection .updates .box {
-    height: 30vh;
+    height: 30ch;
     width: 100%;
   }
   .newsSection .updates .box h1 {
@@ -1327,9 +1342,9 @@ footer .footerHighlight:after {
     flex-direction: column;
   }
   .newsSection .updates .box .subInput input {
-    height: 2vh;
+    height: 2ch;
     width: 80%;
-    margin: 2vh auto;
+    margin: 2ch auto;
     margin-left: 4em;
   }
   .newsSection .updates .box .subInput .subButton {
@@ -1338,12 +1353,12 @@ footer .footerHighlight:after {
     font-size: 2em;
   }
   .newsSection .news {
-    height: 100vh;
+    height: 100ch;
     width: 100%;
   }
   .newsSection .news .head {
     font-size: 1.2em;
-    margin-bottom: 2vh;
+    margin-bottom: 2ch;
     width: 95%;
   }
   .newsSection .news .body {
@@ -1352,12 +1367,12 @@ footer .footerHighlight:after {
     flex-direction: column;
   }
   .newsSection .news .body p {
-    margin-bottom: 2vh;
+    margin-bottom: 2ch;
     width: 100%;
     font-size: 15px;
   }
   .data {
-    height: 60vh;
+    height: 80ch;
   }
   .data div {
     flex-wrap: wrap;
