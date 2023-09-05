@@ -7,6 +7,10 @@
   font-size: 100%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .topBar {
   font-size: 15px;
   height: 6em;
@@ -78,7 +82,7 @@ header .nav {
   top: 0;
   height: 8vh;
   margin: auto;
-  width: 85%;
+  width: 89%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -177,12 +181,34 @@ header .join button {
   cursor: pointer;
   padding: 0 10px;
   font-weight: 600;
+  overflow: hidden;
   font-size: 15px;
   color: white;
   height: 3em;
   border-radius: 10px;
   width: 8em;
   background: linear-gradient(90deg, rgb(47, 87, 239) 11%, rgb(185, 102, 231) 65%);
+}
+header .enroll {
+  margin-top: 3em;
+  display: none;
+  width: 100%;
+  padding: 2px;
+  border-radius: 100px;
+  background: linear-gradient(90deg, rgb(47, 87, 239) 11%, rgb(185, 102, 231) 65%);
+}
+header .enroll button {
+  font-weight: 500;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  font-size: 15px;
+  color: black;
+  height: 3em;
+  border-radius: 100px;
+}
+header .enroll span {
+  margin: auto;
 }
 
 .homePage {
@@ -199,7 +225,7 @@ header .join button {
   position: relative;
   color: white;
   z-index: 40;
-  left: 10vw;
+  left: 13vw;
   top: 7em;
   width: 25vw;
 }
@@ -211,7 +237,7 @@ header .join button {
   color: #ddd;
   margin-top: 2.5vh;
   width: 85%;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 .homePage .textBox .actions {
   margin-top: 3em;
@@ -241,38 +267,66 @@ header .join button {
 }
 .homePage .textBox .actions button:hover i {
   display: inline;
-  animation: myanim 3s infinite ease-in-out;
+  animation: myanim forwards 2s;
 }
 .homePage .textBox .actions a {
   text-decoration: none;
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
 }
 .homePage .textBox .actions a:hover {
   text-decoration: underline;
   text-underline-offset: 5px;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 1px;
 }
 .homePage .textBox .actions a i {
   padding: 0 5px;
 }
 
 .data {
-  height: 80vh;
-  width: 100vw;
+  height: 45vh;
+  margin: 5em 0;
+  width: 100%;
   background-image: url("https://rainbowit.net/html/histudy/assets/images/bg/bg-image-20.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  filter: grayscale(40%);
 }
 .data div {
   height: 100%;
-  width: 100%;
+  width: 70%;
+  margin: auto;
   justify-content: center;
   display: flex;
   align-items: center;
+  color: white;
+}
+.data div .counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 5em;
+  padding: auto 3em;
+  justify-content: center;
+}
+.data div .counter:not(:nth-child(4)) {
+  border-right: 0.2px solid #aaa;
+}
+.data div .counter .digit {
   font-size: 55px;
+  font-weight: 600;
+}
+.data div .counter .digit::after {
+  content: "+";
+  font-size: 35px;
+  position: relative;
+  top: -0.25em;
+}
+.data div .counter .digitOf {
+  position: relative;
+  top: -1em;
 }
 
 @keyframes myanim {
@@ -283,7 +337,6 @@ header .join button {
     margin-left: 10px;
   }
 }
-@keyframes underline {}
 @keyframes rotater {
   1% {
     transform: rotate(180deg);
@@ -405,78 +458,7 @@ header .join button {
   top: -3.3em;
 }
 
-.blurBg {
-  filter: blur(50px);
-}
-
-.menu {
-  height: 100vh;
-  padding: 2vh 2em;
-  width: 50vmin;
-  position: absolute;
-  top: -5vh;
-  background-color: white;
-  left: 0vh;
-  display: flex;
-  z-index: 50;
-}
-.menu button {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  padding: 0 10px;
-  display: flex;
-  font-size: 15px;
-  position: relative;
-  top: -1em;
-  left: -2em;
-  height: 15px;
-}
-.menu ul {
-  list-style: none;
-  width: 100%;
-  margin-left: 1.5em;
-}
-.menu ul li {
-  cursor: pointer;
-  font-size: 15px;
-  width: 100%;
-  margin: 0.5em auto;
-  font-weight: 500;
-  padding: 6px 0;
-  border-bottom: 1px solid #292929;
-}
-.menu ul li:hover {
-  color: #2f57ef;
-}
-.menu ul li i {
-  display: none;
-}
-.menu ul li .dropdown .links {
-  display: none;
-  font-size: 14px;
-  padding: 0 10px;
-  width: 90%;
-}
-.menu ul li .dropdown .links a {
-  padding: 5px;
-  display: block;
-  width: 100%;
-  text-decoration: none;
-  color: black;
-}
-.menu ul li .dropdown .links a:hover {
-  color: #2f57ef;
-}
-.menu ul li .dropdown .links a:nth-child(1) {
-  border-bottom: 1px solid #aaa;
-}
-.menu ul li .dropdown:hover .links {
-  display: block;
-}
-
 .feedback {
-  width: 100%;
   height: 55vh;
   margin: auto;
   text-align: center;
@@ -492,6 +474,7 @@ header .join button {
 .feedback .head p {
   font-size: 1.2em;
   width: 40%;
+  margin: auto 25px;
   margin: auto;
 }
 .feedback button {
@@ -506,62 +489,66 @@ header .join button {
   width: 3em;
   background-color: white;
   position: relative;
-  top: 12em;
-  visibility: hidden;
-  transition: all 0.5s;
+  top: 11em;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 .feedback:hover button {
-  visibility: visible;
+  transition: opacity 0.5s;
+  opacity: 1;
 }
 .feedback .right {
-  right: -33vw;
+  right: -30vw;
 }
 .feedback .left {
-  left: -33vw;
+  left: -30vw;
 }
 .feedback .scroll {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  width: 70vw;
+  width: 1290px;
   margin: 2vh auto;
   display: grid;
   overflow-x: scroll;
   grid-template-columns: repeat(6, auto);
-  gap: 2em;
 }
 .feedback .scroll::-webkit-scrollbar {
   display: none;
 }
-.feedback .scroll .card {
+.feedback .scroll .cardBox {
+  background-color: white;
+  padding: 0 5px;
+}
+.feedback .scroll .cardBox .card {
   border-radius: 5px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  padding: 40px;
+  padding: 35px;
   width: 350px;
   height: 200px;
   background-color: rgba(47, 87, 239, 0.1294117647);
 }
-.feedback .scroll .card .userInfo {
+.feedback .scroll .cardBox .card .userInfo {
   display: flex;
 }
-.feedback .scroll .card .userInfo img {
+.feedback .scroll .cardBox .card .userInfo img {
   width: 60px;
   border: 5px white solid;
   height: 60px;
   border-radius: 50%;
 }
-.feedback .scroll .card .userInfo .info {
+.feedback .scroll .cardBox .card .userInfo .info {
   margin: auto;
   text-align: left;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.feedback .scroll .card .userInfo .info h3 {
+.feedback .scroll .cardBox .card .userInfo .info h3 {
   font-size: min(2em, 20px);
 }
-.feedback .scroll .card .userInfo .info span {
+.feedback .scroll .cardBox .card .userInfo .info span {
   font-size: 13px;
   color: #aaa;
 }
@@ -583,10 +570,11 @@ header .join button {
   width: 100%;
 }
 .newsSection .news {
+  background: linear-gradient(270deg, rgba(185, 102, 231, 0.8) 10%, rgb(47, 87, 239) 80%);
+  width: 100%;
   padding-top: 10vh;
   color: white;
   height: 60vh;
-  background: linear-gradient(90deg, rgb(47, 87, 239) 11%, rgb(185, 102, 231) 65%);
 }
 .newsSection .news .head {
   width: 70%;
@@ -606,26 +594,43 @@ header .join button {
   color: #ccc;
   width: 50%;
 }
-.newsSection .news .body span {
+.newsSection .news .body button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0 10px;
   border: 2px solid #ccc;
-  height: 1.8em;
-  width: 8em;
+  height: 4em;
+  width: 12em;
   color: #ccc;
   text-align: center;
-  padding: 10px 15px;
+  padding: 10px;
   border-radius: 100px;
 }
-.newsSection .news .body span a {
+.newsSection .news .body button a {
   text-decoration: none;
   color: #ccc;
   font-size: 16px;
 }
+.newsSection .news .body button i {
+  display: none;
+}
+.newsSection .news .body button:hover {
+  background-color: #2f57ef;
+  transition: 1s;
+  border: #2f57ef 2px solid;
+}
+.newsSection .news .body button:hover i {
+  display: inline;
+  animation: myanim forwards 2s;
+}
 .newsSection .news .newsCards {
-  width: 100%;
+  width: 80%;
   z-index: 50;
+  margin: auto;
   display: flex;
-  justify-content: center;
-  gap: 2em;
+  justify-content: space-evenly;
+  gap: 1em;
   margin-top: 10vh;
   flex-wrap: nowrap;
 }
@@ -634,11 +639,11 @@ header .join button {
   display: flex;
   z-index: 50;
   flex-direction: column;
-  padding: 25px 40px;
+  padding: 40px;
   width: 300px;
   color: black;
   border-radius: 5px;
-  height: 220px;
+  height: 200px;
   background-color: white;
   transition: all 0.5s;
 }
@@ -653,19 +658,25 @@ header .join button {
   transform: scale(104%);
 }
 .newsSection .news .newsCards .card a {
-  margin-top: 5em;
+  margin-top: 4em;
   color: inherit;
   text-decoration: none;
 }
+.newsSection .bgCurve {
+  background-image: url("https://rainbowit.net/html/histudy/assets/images/bg/banner-bg-shape-1.png");
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: -17.5vh;
+  width: 100%;
+  height: 20vh;
+  background-size: cover;
+}
 .newsSection .updates {
   position: relative;
-  top: -20vh;
   background-color: white;
-  border-radius: 50% 50% 0 0;
 }
 .newsSection .updates .box {
-  padding-top: 30vh;
-  height: 70vh;
   width: 40%;
   height: 50vh;
   margin: auto;
@@ -719,7 +730,7 @@ footer .footer {
   height: 30vh;
 }
 footer .footer .contactUs {
-  width: 30%;
+  width: 30vw;
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -755,7 +766,7 @@ footer .footer .contactUs button span {
   transition: all 1s;
 }
 footer .footer .contactUs button:hover span {
-  transform: translateX(0);
+  transform: translateX(10px);
 }
 footer .footer .contactUs button:hover .second {
   transform: translateX(55px);
@@ -875,6 +886,29 @@ footer .footerHighlight:after {
   .newsSection .updates .subButton {
     left: 2em;
   }
+  .feedback button {
+    height: 5em;
+    width: 5em;
+  }
+  .feedback .right {
+    right: -40vw;
+  }
+  .feedback .left {
+    left: -40vw;
+  }
+  .feedback .scroll {
+    width: 90vw;
+  }
+}
+@keyframes navTran {
+  0% {
+    transform: translateX(-100em);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0em);
+  }
 }
 @media screen and (max-width: 1350px) {
   .topBar .searchBar input {
@@ -884,13 +918,26 @@ footer .footerHighlight:after {
     background-position-x: -25em;
     background-size: inherit;
   }
+  .feedback button {
+    top: 15em;
+    height: 5em;
+    width: 5em;
+  }
+  .feedback .right {
+    right: -40vw;
+  }
+  .feedback .left {
+    left: -40vw;
+  }
+  .feedback .scroll {
+    width: 90vw;
+  }
   header {
     height: 8vh;
   }
   header .nav {
-    width: 100%;
-    gap: 48vw;
-    justify-content: space-evenly;
+    width: 80%;
+    justify-content: space-between;
   }
   header .nav .box1 {
     gap: 0em;
@@ -908,6 +955,7 @@ footer .footerHighlight:after {
   }
   header .navs {
     display: none;
+    width: 0;
   }
   header .join {
     display: none;
@@ -921,6 +969,86 @@ footer .footerHighlight:after {
   .updates .newsSection .updates .subButton {
     left: 2em;
   }
+  .menu {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    left: 0vh;
+    top: 0;
+    display: flex;
+    z-index: 50;
+  }
+  .menu .enroll {
+    display: block;
+  }
+  .menu .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    z-index: -1;
+    width: 100vw;
+  }
+  .menu button {
+    height: 15px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .menu button i {
+    font-size: 15px;
+    height: 15px;
+  }
+  .menu ul {
+    position: absolute;
+    list-style: none;
+    width: 40%;
+    height: 100vh;
+    margin: auto;
+    background-color: white;
+    animation: navTran 0.5s;
+    padding: 4em;
+  }
+  .menu ul li {
+    cursor: pointer;
+    font-size: 15px;
+    width: 100%;
+    margin: 0.5em auto;
+    font-weight: 500;
+    padding: 6px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  .menu ul li:hover {
+    color: #2f57ef;
+  }
+  .menu ul li i {
+    display: none;
+  }
+  .menu ul li .dropdown .links {
+    display: none;
+    font-size: 14px;
+    padding: 0 10px;
+    width: 90%;
+  }
+  .menu ul li .dropdown .links a {
+    padding: 5px;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+  }
+  .menu ul li .dropdown .links a:hover {
+    color: #2f57ef;
+  }
+  .menu ul li .dropdown .links a:nth-child(1) {
+    border-bottom: 1px solid #aaa;
+  }
+  .menu ul li .dropdown:hover .links {
+    display: block;
+  }
 }
 @media screen and (max-width: 1150px) {
   body {
@@ -929,6 +1057,11 @@ footer .footerHighlight:after {
   .homePage {
     background-position-x: -75em;
     background-size: inherit;
+  }
+  header .nav {
+    width: 100%;
+    justify-content: space-around;
+    gap: 45vw;
   }
   header .nav .box1 .logo img {
     width: 20em;
@@ -954,7 +1087,7 @@ footer .footerHighlight:after {
     margin-top: 8em;
   }
   .homePage .textBox .actions button {
-    width: 15em;
+    width: 14em;
   }
   .homePage .textBox h2 {
     font-size: 3.5em;
@@ -972,6 +1105,23 @@ footer .footerHighlight:after {
     gap: 4em 2em;
     grid-template-columns: repeat(2, 33em);
   }
+  .feedback button {
+    top: 20em;
+    height: 5em;
+    width: 5em;
+  }
+  .feedback .right {
+    right: -40vw;
+  }
+  .feedback .left {
+    left: -40vw;
+  }
+  .feedback .scroll {
+    width: 90vw;
+  }
+  footer .footer .contactUs button {
+    width: 23vw;
+  }
 }
 @media screen and (max-width: 768px) {
   body {
@@ -981,8 +1131,11 @@ footer .footerHighlight:after {
     background-position-x: -140em;
     background-size: auto;
   }
+  .topBar {
+    width: 100%;
+  }
   .topBar .country {
-    width: 60%;
+    width: 65%;
   }
   .topBar .searchBar {
     display: none;
@@ -1008,9 +1161,9 @@ footer .footerHighlight:after {
     height: auto;
   }
   .homePage .textBox {
-    width: 100vw;
+    width: 90vw;
     top: 15em;
-    left: 0.5em;
+    left: 2.5em;
   }
   .homePage .textBox h2 {
     font-size: 4em;
@@ -1023,20 +1176,23 @@ footer .footerHighlight:after {
     font-size: 20px;
   }
   .homePage .textBox .actions button {
-    font-size: 20px;
-    width: 12em;
-    height: 3.5em;
+    font-size: 18px;
+    width: 11em;
+    height: 3.2em;
   }
   .courses {
-    gap: 6em;
-    grid-template-columns: repeat(1, 45em);
+    gap: 2em;
+    grid-template-columns: repeat(1, 49em);
+  }
+  .feedback {
+    margin-bottom: 15vh;
   }
   .feedback .head h2 {
     font-size: 4em;
   }
   .feedback .head p {
     font-size: 1.8em;
-    width: 100%;
+    width: 90%;
   }
   .feedback button {
     top: 20em;
@@ -1104,7 +1260,7 @@ footer .footerHighlight:after {
     height: 2vh;
     width: 80%;
     margin: 2vh auto;
-    margin-left: 5em;
+    margin-left: 4em;
   }
   .newsSection .updates .box .subInput .subButton {
     left: 5em;
@@ -1136,5 +1292,17 @@ footer .footerHighlight:after {
     height: 60vh;
     width: 40%;
     align-items: center;
+  }
+  .data {
+    height: 60vh;
+  }
+  .data div {
+    flex-wrap: wrap;
+  }
+  .data div .counter {
+    flex-wrap: nowrap;
+  }
+  .data div .counter:not(:nth-child(4)) {
+    border-right: none;
   }
 }/*# sourceMappingURL=styles.css.map */

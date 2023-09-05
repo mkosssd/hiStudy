@@ -3,16 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>HiStudy</title>
     <link rel="stylesheet" href="styles.css" />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  </head>
-  <body>
+    <link
+      rel="shortcut icon"
+      href="https://rainbowit.net/html/histudy/assets/images/favicon.png"
+      type="image/x-icon"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    </head>
+    <body>
     <div class="topBar">
       <div class="country">
         <span class="lang">
@@ -57,7 +61,9 @@
           </div>
         </div>
         <div class="navs" id="navBar">
+          <div class="overlay" onclick="toggle()"></div>
           <ul>
+            <button onclick="toggle()"><i class="fa fa-remove"></i></button>
             <li>Home <i class="fa-solid fa-chevron-down"></i></li>
             <li>Courses <i class="fa-solid fa-chevron-down"></i></li>
             <li>
@@ -72,8 +78,10 @@
             <li>Pages <i class="fa-solid fa-chevron-down"></i></li>
             <li>Elements <i class="fa-solid fa-chevron-down"></i></li>
             <li>Blog <i class="fa-solid fa-chevron-down"></i></li>
+            <div class="enroll">
+              <button><span>Enroll Now</span></button>
+            </div>
           </ul>
-          <button onclick="toggle()"><i class="fa fa-remove"></i></button>
         </div>
         <div class="join">
           <button><span>Join Now</span></button>
@@ -85,12 +93,8 @@
         </div>
       </div>
     </header>
-    <main>
+    <main id="main">
       <div class="homePage">
-        <!-- <img
-          src="https://rainbowit.net/html/histudy/assets/images/bg/bg-image-19.jpg"
-          alt="bgImage"
-          /> -->
         <div class="textBox">
           <h2>
             <span id="brandName">LoStudy</span> Starter is a community for
@@ -173,9 +177,24 @@
         </div>
       </div>
       <div class="data">
-        <div><div class="counter-container">
-          <div class="counter" id="counter">475</div>
-      </div></div>
+        <div>
+          <div class="counter">
+            <span class="digit" id="counter">475</span
+            ><span class="digitOf">Learners & counting</span>
+          </div>
+          <div class="counter">
+            <span class="digit" id="counter2">45</span
+            ><span class="digitOf">Courses & Video</span>
+          </div>
+          <div class="counter">
+            <span class="digit" id="counter3">365</span
+            ><span class="digitOf">Certified Students</span>
+          </div>
+          <div class="counter">
+            <span class="digit" id="counter4">215</span
+            ><span class="digitOf">Certified Students</span>
+          </div>
+        </div>
       </div>
       <div class="feedback">
         <div class="head">
@@ -192,103 +211,111 @@
           <i class="fa-solid fa-arrow-right"></i>
         </button>
         <div class="scroll">
-          <div class="card">
-            <div class="userInfo">
-              <img
-                src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-01.png"
-                alt=""
-              />
-              <div class="info">
-                <h3>Martha Moldanado</h3>
-                <span>Executive Chairman @ Google</span>
+          <div class="cardBox">
+            <div class="card">
+              <div class="userInfo">
+                <img
+                  src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-01.png"
+                  alt=""
+                />
+                <div class="info">
+                  <h3>Martha Moldanado</h3>
+                  <span>Executive Chairman @ Google</span>
+                </div>
               </div>
-            </div>
-            <div class="feed">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
-                nemo autem adipisci laborum, ratione dolorum?
-              </p>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="userInfo">
-              <img
-                src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-02.png"
-                alt=""
-              />
-              <div class="info">
-                <h3>Avaya Morito</h3>
-                <span>CEO @ Google</span>
-              </div>
-            </div>
-            <div class="feed">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
-                nemo autem adipisci laborum, ratione dolorum?
-              </p>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+              <div class="feed">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ullam nemo autem adipisci laborum, ratione dolorum?
+                </p>
+                <div class="rating">
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                </div>
               </div>
             </div>
           </div>
-          <div class="card">
-            <div class="userInfo">
-              <img
-                src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-01.png"
-                alt=""
-              />
-              <div class="info">
-                <h3>Martha Moldanado</h3>
-                <span>Executive Chairman @ Google</span>
+          <div class="cardBox">
+            <div class="card">
+              <div class="userInfo">
+                <img
+                  src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-02.png"
+                  alt=""
+                />
+                <div class="info">
+                  <h3>Avaya Morito</h3>
+                  <span>CEO @ Google</span>
+                </div>
               </div>
-            </div>
-            <div class="feed">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
-                nemo autem adipisci laborum, ratione dolorum?
-              </p>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+              <div class="feed">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ullam nemo autem adipisci laborum, ratione dolorum?
+                </p>
+                <div class="rating">
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                </div>
               </div>
             </div>
           </div>
-          <div class="card">
-            <div class="userInfo">
-              <img
-                src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-01.png"
-                alt=""
-              />
-              <div class="info">
-                <h3>Martha Moldanado</h3>
-                <span>Executive Chairman @ Google</span>
+          <div class="cardBox">
+            <div class="card">
+              <div class="userInfo">
+                <img
+                  src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-01.png"
+                  alt=""
+                />
+                <div class="info">
+                  <h3>Martha Moldanado</h3>
+                  <span>Executive Chairman @ Google</span>
+                </div>
+              </div>
+              <div class="feed">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ullam nemo autem adipisci laborum, ratione dolorum?
+                </p>
+                <div class="rating">
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                </div>
               </div>
             </div>
-            <div class="feed">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
-                nemo autem adipisci laborum, ratione dolorum?
-              </p>
-              <div class="rating">
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
-                <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+          </div>
+          <div class="cardBox">
+            <div class="card">
+              <div class="userInfo">
+                <img
+                  src="https://rainbowit.net/html/histudy/assets/images/testimonial/client-01.png"
+                  alt=""
+                />
+                <div class="info">
+                  <h3>Martha Moldanado</h3>
+                  <span>Executive Chairman @ Google</span>
+                </div>
+              </div>
+              <div class="feed">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ullam nemo autem adipisci laborum, ratione dolorum?
+                </p>
+                <div class="rating">
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                  <i class="fa-solid fa-star" style="color: #ff8f3c"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -304,12 +331,19 @@
               Learning communicate to global world and build a bright future and
               career development, increase your skill with our histudy.
             </p>
-            <span><a href="#">See All Articles</a></span>
+            <button>
+              <a href="#"
+                >See All Articles<i
+                  class="fa-solid fa-arrow-right"
+                  style="color: #ffffff"
+                ></i
+              ></a>
+            </button>
           </div>
           <div class="newsCards">
             <div class="card">
               <span> <i class="fa-regular fa-clock"></i> 20 March 2023 </span>
-              <h2>Learn From These You Learn Education.</h2>
+              <h2>Learn From These You Learn .</h2>
               <a href="#"
                 >Learn More <i class="fa-solid fa-arrow-right"></i>
               </a>
@@ -333,6 +367,7 @@
             </div>
           </div>
         </div>
+        <div class="bgCurve"></div>
         <div class="updates">
           <div class="box">
             <h1>Want to get special offers and Course updates?</h1>
@@ -394,9 +429,15 @@
             <li><a href="#">Location:North America, USA</a></li>
             <li>
               <a href="#">
-                <span><i class="fa-brands fa-facebook-f"></i></span>
-                <span><i class="fa-brands fa-twitter"></i></span>
-                <span><i class="fa-brands fa-instagram"></i></span>
+                <span><i class="fa-brands fa-facebook-f"></i></span
+              ></a>
+              <a href="#">
+                <span><i class="fa-brands fa-twitter"></i></span
+              ></a>
+              <a href="#">
+                <span><i class="fa-brands fa-instagram"></i></span
+              ></a>
+              <a href="#">
                 <span><i class="fa-brands fa-linkedin"></i></span>
               </a>
             </li>
@@ -421,7 +462,6 @@
         </div>
       </div>
     </footer>
-    
   </body>
   <script src="script.js" defer></script>
 </html>
