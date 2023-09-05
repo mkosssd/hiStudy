@@ -11,19 +11,24 @@ body {
   overflow-x: hidden;
 }
 
+hr {
+  color: rgb(252, 252, 252);
+}
+
 .topBar {
   font-size: 15px;
-  height: 6em;
+  padding: 1em 0;
   z-index: 5;
   border-bottom: 2px solid #eee;
   display: flex;
   align-items: center;
+  max-width: 1300px;
+  margin: auto;
   font-size: 12px;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .topBar img {
   width: 17px;
-  height: 12px;
 }
 .topBar .country {
   display: flex;
@@ -34,11 +39,10 @@ body {
   font-size: 9px;
 }
 .topBar .searchBar input {
-  height: 3ch;
   border-radius: 150px;
   background-color: white;
   width: 30vmax;
-  padding: 8px 15px;
+  padding: 13px 15px;
   border: 2px solid #eee;
   font-size: 15px;
 }
@@ -48,7 +52,7 @@ body {
   cursor: pointer;
   padding: 0 10px;
   position: relative;
-  left: -4.5ch;
+  left: -5ch;
 }
 .topBar .searchBar button i {
   font-size: 15px;
@@ -80,12 +84,12 @@ header {
 header .nav {
   position: sticky;
   top: 0;
-  height: 10ch;
+  padding: 3ch auto;
   margin: auto;
-  width: 89%;
+  max-width: 1300px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 header .nav .box1 {
   display: flex;
@@ -101,9 +105,8 @@ header .nav .box1 .category button {
   background: transparent;
   cursor: pointer;
   padding: 0 10px;
-  padding: 0;
+  padding: 0.8em;
   background-color: #f4f5f7;
-  height: 3.2em;
   width: 10em;
   font-size: 15px;
   font-weight: 500;
@@ -111,14 +114,14 @@ header .nav .box1 .category button {
 }
 header .nav .ham {
   display: none;
-  height: 2em;
+  padding: 1em;
   width: 20px;
   margin-right: 5px;
   cursor: pointer;
 }
 header .nav .ham span {
   margin: 3px;
-  height: 2px;
+  padding: 1px;
   display: block;
   background-color: #aaa;
 }
@@ -186,7 +189,7 @@ header .join button {
   overflow: hidden;
   font-size: 15px;
   color: white;
-  height: 3em;
+  padding: 0.8em;
   border-radius: 10px;
   width: 8em;
   background: linear-gradient(90deg, rgb(47, 87, 239) 11%, rgb(185, 102, 231) 65%);
@@ -200,13 +203,17 @@ header .enroll {
   background: linear-gradient(90deg, rgb(47, 87, 239) 11%, rgb(185, 102, 231) 65%);
 }
 header .enroll button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0 10px;
   font-weight: 500;
   width: 100%;
   padding: 10px;
   background-color: white;
   font-size: 15px;
   color: black;
-  height: 3em;
+  padding: 0.8em;
   border-radius: 100px;
 }
 header .enroll span {
@@ -215,26 +222,22 @@ header .enroll span {
 
 .homePage {
   background-image: url("https://rainbowit.net/html/histudy/assets/images/bg/bg-image-19.jpg");
-  background-size: 100% 90%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 80ch;
-  padding: 10ch auto;
-}
-.homePage img {
-  width: 100%;
-  height: 100%;
+  padding: 50px 0;
 }
 .homePage .textBox {
+  max-width: 1300px;
   position: relative;
   color: white;
+  margin: auto;
   z-index: 40;
-  left: 13vw;
-  top: 7em;
-  width: 25vw;
+  padding: 10vh 0;
 }
 .homePage .textBox h2 {
   font-size: 3em;
   line-height: 1.2em;
+  width: 35%;
 }
 .homePage .textBox p {
   color: #ddd;
@@ -251,8 +254,8 @@ header .enroll span {
   cursor: pointer;
   padding: 0 10px;
   color: white;
-  width: 40%;
-  height: 3.7em;
+  width: 20%;
+  padding: 1.5em;
   font-size: 1em;
   border-radius: 100px;
   padding: 10px;
@@ -288,7 +291,7 @@ header .enroll span {
 }
 
 .data {
-  height: 45ch;
+  padding: 20ch 0;
   margin: 5em 0;
   width: 100%;
   background-image: url("https://rainbowit.net/html/histudy/assets/images/bg/bg-image-20.jpg");
@@ -298,7 +301,6 @@ header .enroll span {
   filter: grayscale(40%);
 }
 .data div {
-  height: 100%;
   width: 70%;
   margin: auto;
   justify-content: center;
@@ -310,7 +312,6 @@ header .enroll span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 5em;
   padding: auto 3em;
   justify-content: center;
 }
@@ -350,7 +351,6 @@ header .enroll span {
 }
 .courses {
   margin: 10ch auto;
-  width: 80%;
   display: grid;
   cursor: pointer;
   gap: 1.8em;
@@ -359,7 +359,7 @@ header .enroll span {
   grid-template-columns: repeat(4, 19em);
 }
 .courses .box {
-  height: 8ch;
+  padding: 1.2ch;
   justify-content: center;
   overflow: hidden;
   align-items: center;
@@ -437,7 +437,6 @@ header .enroll span {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
   bottom: 0;
   left: 0;
   background-color: #ffffff;
@@ -462,7 +461,6 @@ header .enroll span {
 }
 
 .feedback {
-  height: 45ch;
   margin: auto;
   padding: 6em;
   text-align: center;
@@ -511,7 +509,7 @@ header .enroll span {
   -ms-overflow-style: none;
   scrollbar-width: none;
   width: 1290px;
-  margin: 2ch auto;
+  margin: auto;
   display: grid;
   overflow-x: scroll;
   grid-template-columns: repeat(6, auto);
@@ -528,9 +526,8 @@ header .enroll span {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  padding: 35px;
+  padding: 6vh 3.4ch;
   width: 350px;
-  height: 200px;
   background-color: rgba(47, 87, 239, 0.1294117647);
 }
 .feedback .scroll .cardBox .card .userInfo {
@@ -563,7 +560,7 @@ header .enroll span {
 }
 .feedback .scroll .feed .rating {
   float: left;
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 .feedback .scroll .feed .rating i {
   font-size: 12px;
@@ -579,7 +576,6 @@ header .enroll span {
   width: 100%;
   padding-top: 10ch;
   color: white;
-  height: 60ch;
 }
 .newsSection .news .head {
   width: 70%;
@@ -605,7 +601,6 @@ header .enroll span {
   cursor: pointer;
   padding: 0 10px;
   border: 2px solid #ccc;
-  height: 4em;
   width: 12em;
   color: #ccc;
   text-align: center;
@@ -645,7 +640,6 @@ header .enroll span {
   padding: 40px;
   color: black;
   border-radius: 5px;
-  height: 20ch;
   background-color: white;
   transition: all 0.5s;
 }
@@ -672,7 +666,7 @@ header .enroll span {
   background-repeat: no-repeat;
   top: -17.5ch;
   width: 100%;
-  height: 20ch;
+  padding: 9ch 0;
   background-size: cover;
 }
 .newsSection .updates {
@@ -681,9 +675,8 @@ header .enroll span {
 }
 .newsSection .updates .box {
   width: 40%;
-  height: 30ch;
+  padding: 5ch 0;
   margin: auto;
-  padding-bottom: 10ch;
 }
 .newsSection .updates .box h1 {
   font-size: 44px;
@@ -697,11 +690,10 @@ header .enroll span {
   align-items: center;
 }
 .newsSection .updates .box .subInput input {
-  height: 4ch;
   margin: auto;
   border-radius: 150px;
   width: 45em;
-  padding: 15px 20px;
+  padding: 25px 20px;
   border: 2px solid #eee;
   font-size: 15px;
 }
@@ -711,18 +703,16 @@ header .enroll span {
   cursor: pointer;
   padding: 0 10px;
   color: white;
-  height: 5ch;
   position: relative;
   left: -9.5em;
   width: 10em;
   border-radius: 100px;
-  padding: 5px 10px;
+  padding: 15px 10px;
   background: linear-gradient(90deg, rgb(47, 87, 239) 11%, rgb(185, 102, 231) 65%);
 }
 
 footer {
   width: 100%;
-  height: 45ch;
 }
 footer .footer {
   border-top: 2px solid #ddd;
@@ -730,8 +720,7 @@ footer .footer {
   display: flex;
   justify-content: space-around;
   margin: auto;
-  width: 70%;
-  height: 30ch;
+  max-width: 1300px;
 }
 footer .footer .contactUs {
   width: 30vw;
@@ -753,7 +742,7 @@ footer .footer .contactUs button {
   cursor: pointer;
   padding: 0 10px;
   border: 3px solid #2f57ef;
-  height: 4em;
+  padding: 1em;
   width: 15em;
   border-radius: 150px;
 }
@@ -812,7 +801,7 @@ footer .footer .usefulLinks ul li a:after {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
+  padding: 1px;
   bottom: 0;
   left: 0;
   background-color: #2f57ef;
@@ -823,15 +812,14 @@ footer .footer .usefulLinks ul li span {
   padding: 0 8px;
 }
 footer .copyright {
-  border-top: 2px solid #ddd;
+  border-top: 1px solid #ddd;
   font-weight: 300;
   font-size: 12px;
-  width: 70%;
-  height: 10ch;
+  max-width: 1300px;
+  padding: 5ch;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  gap: 15em;
+  justify-content: space-between;
   margin: auto;
 }
 footer .copyright .others ul {
@@ -890,18 +878,31 @@ footer .footerHighlight:after {
   .newsSection .updates .subButton {
     left: 2em;
   }
+  .courses {
+    max-width: 1300px;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .feedback {
+    max-width: 1300px;
+    margin: auto;
+  }
   .feedback button {
-    height: 5em;
-    width: 5em;
+    height: 4em;
+    width: 4em;
   }
   .feedback .right {
-    right: -40vw;
+    right: -33vw;
   }
   .feedback .left {
-    left: -40vw;
+    left: -33vw;
   }
   .feedback .scroll {
-    width: 90vw;
+    max-width: 1300px;
+    margin: auto;
+  }
+  .feedback .scroll .cardBox {
+    padding: 0 10px;
   }
 }
 @keyframes navTran {
@@ -915,6 +916,10 @@ footer .footerHighlight:after {
   }
 }
 @media screen and (max-width: 1350px) {
+  footer .footer,
+  footer .copyright {
+    max-width: 1100px;
+  }
   .topBar .searchBar input {
     height: 2ch;
   }
@@ -922,25 +927,40 @@ footer .footerHighlight:after {
     background-position-x: -25em;
     background-size: inherit;
   }
+  .homePage .textBox {
+    max-width: 1100px;
+  }
+  .courses {
+    max-width: 1100px;
+  }
+  .feedback {
+    max-width: 1100px;
+  }
   .feedback button {
     top: 15em;
     height: 5em;
     width: 5em;
   }
   .feedback .right {
-    right: -40vw;
+    right: -37vw;
   }
   .feedback .left {
-    left: -40vw;
+    left: -36vw;
   }
   .feedback .scroll {
-    width: 90vw;
+    max-width: 1100px;
+  }
+  .topBar {
+    max-width: 1100px;
+    margin: auto;
+    justify-content: space-between;
   }
   header {
-    height: 8ch;
+    margin: auto;
   }
   header .nav {
-    width: 80%;
+    height: 10ch;
+    max-width: 1100px;
     justify-content: space-between;
   }
   header .nav .box1 {
@@ -971,14 +991,16 @@ footer .footerHighlight:after {
     width: 100%;
   }
   .newsSection .news .newsCards {
+    max-width: 1100px;
     width: 85%;
     margin: auto;
     margin-top: 10ch;
-    grid-template-columns: repeat(3, 33%);
-    justify-content: center;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
   }
   .newsSection .news .head,
   .newsSection .news .body {
+    max-width: 1100px;
     width: 90%;
   }
   .newsSection .updates .subInput {
@@ -1076,13 +1098,21 @@ footer .footerHighlight:after {
     background-position-x: -75em;
     background-size: inherit;
   }
+  .homePage .textBox {
+    max-width: 900px;
+    margin: auto 125px;
+  }
+  .homePage .textBox h2 {
+    width: 100%;
+  }
   header {
     height: 12ch;
   }
   header .nav {
+    max-width: 750px;
     height: 12ch;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 45vw;
   }
   header .nav .box1 .logo img {
@@ -1090,7 +1120,8 @@ footer .footerHighlight:after {
   }
   .topBar {
     width: 100%;
-    justify-content: space-evenly;
+    max-width: 750px;
+    justify-content: space-between;
   }
   .topBar .searchBar input {
     height: 2ch;
@@ -1103,7 +1134,8 @@ footer .footerHighlight:after {
     display: none;
   }
   .homePage .textBox {
-    width: 35vw;
+    max-width: 900px;
+    margin: auto 25px;
   }
   .homePage .textBox .actions {
     margin-top: 8em;
@@ -1112,20 +1144,27 @@ footer .footerHighlight:after {
     width: 14em;
   }
   .homePage .textBox h2 {
-    font-size: 3.5em;
+    font-size: 4em;
+    width: 50%;
   }
   .homePage .textBox p {
     font-size: 1.5em;
+    width: 50%;
   }
   .homePage .textBox img {
     width: 100%;
-    max-width: 1100px;
+    max-width: 900px;
     min-height: 400px;
     height: auto;
   }
   .courses {
-    gap: 4em 2em;
-    grid-template-columns: repeat(2, 33em);
+    max-width: 900px;
+    gap: 2em 4em;
+    grid-template-columns: repeat(2, 42%);
+  }
+  .feedback {
+    max-width: 900px;
+    margin: auto;
   }
   .feedback button {
     top: 20em;
@@ -1139,7 +1178,8 @@ footer .footerHighlight:after {
     left: -40vw;
   }
   .feedback .scroll {
-    width: 90vw;
+    margin: auto;
+    max-width: 800px;
   }
   footer .footer .contactUs button {
     width: 23vw;
@@ -1149,28 +1189,28 @@ footer .footerHighlight:after {
     height: 90ch;
   }
   .newsSection .news .newsCards {
+    max-width: 900px;
     width: 85%;
     margin: auto;
     margin-top: 10ch;
-    grid-template-columns: repeat(2, 40%);
+    grid-template-columns: repeat(2, 45%);
     grid-template-rows: auto auto;
-    justify-content: center;
+    justify-content: space-between;
   }
   .newsSection .news .head,
   .newsSection .news .body {
-    width: 70%;
+    max-width: 750px;
   }
   .newsSection .news .news {
     height: 100ch;
     width: 100%;
+    max-width: 750px;
   }
   .newsSection .news .news .head {
     font-size: 1.2em;
     margin-bottom: 2ch;
-    width: 95%;
   }
   .newsSection .news .news .body {
-    width: 95%;
     flex-direction: column;
   }
   .newsSection .news .news .body p {
@@ -1179,13 +1219,16 @@ footer .footerHighlight:after {
     width: 100%;
   }
   .newsSection .updates .box {
-    height: 60ch;
+    height: 75ch;
   }
   .newsSection .updates .subInput {
     margin: auto;
   }
   .newsSection .updates .subButton {
     left: 2em;
+  }
+  footer .footer, footer .copyright {
+    max-width: 750px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -1251,7 +1294,7 @@ footer .footerHighlight:after {
   }
   .courses {
     gap: 2em;
-    grid-template-columns: repeat(1, 49em);
+    grid-template-columns: repeat(1, 100%);
   }
   .feedback {
     margin-bottom: 45ch;
