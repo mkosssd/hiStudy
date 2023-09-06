@@ -9,9 +9,8 @@ setInterval(() => {
 }, 900);
 
 const swiper = document.querySelector(".scroll");
-const width = document.querySelector(".cardBox").offsetWidth;
-console.log(width);
 function scroller(direction) {
+  const width = document.querySelector(".cardBox").offsetWidth;
   if (direction === "right") {
     swiper.scrollLeft += width;
   } else {
